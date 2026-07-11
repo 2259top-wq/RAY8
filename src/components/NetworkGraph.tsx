@@ -117,7 +117,12 @@ function Flow() {
 
         if (expandedProducts.includes(pNodeId)) {
           productBizMap[pNodeId] = [];
+          const processedBizIds = new Set<number>();
+          
           productDetails.businesses.forEach((biz: { id: number; name: string; city: string }) => {
+            if (processedBizIds.has(biz.id)) return;
+            processedBizIds.add(biz.id);
+
             const bizId = `biz-${biz.id}`;
             const bizNode: Node = {
               id: bizId,
@@ -135,7 +140,7 @@ function Flow() {
               style: { stroke: brand.color, strokeWidth: 1, opacity: 0.5 }
             };
 
-            // Edges and nodes are collected; layoutUtils will deduplicate the nodes
+            // Edges and nodes are collected; layoutUtils will deduplicate the nodes globally
             if (brand.side === 'left') {
               leftNodes.push(bizNode);
               leftEdges.push(bizEdge);
