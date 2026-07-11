@@ -102,11 +102,11 @@ export default function Dashboard() {
             <Map className="w-5 h-5 mr-2 text-emerald-400" />
             各縣市受波及業者數量
           </h2>
-          <div className="h-80">
+          <div className="h-[600px] w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={cityData} layout="vertical" margin={{ top: 0, right: 30, left: 20, bottom: 0 }}>
+              <BarChart data={cityData} layout="vertical" margin={{ top: 0, right: 30, left: 30, bottom: 0 }}>
                 <XAxis type="number" stroke="#475569" />
-                <YAxis dataKey="name" type="category" stroke="#94a3b8" width={60} />
+                <YAxis dataKey="name" type="category" stroke="#94a3b8" width={80} interval={0} tick={{fontSize: 12}} />
                 <Tooltip 
                   contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px', color: '#f1f5f9' }}
                   cursor={{fill: '#334155'}}
