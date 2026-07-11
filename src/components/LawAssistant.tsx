@@ -27,8 +27,32 @@ export default function LawAssistant() {
     setQuery('');
     setMessages(prev => [...prev, { role: 'user', text: userMsg }]);
 
-    // RAG Retrieval
-    const results = fuse.search(userMsg).slice(0, 3);
+    // --- Semantic Dictionary (Colloquial to Legal Terms) ---
+    const semanticMap: Record<string, string> = {
+      '關': '有期徒刑 拘役',
+      '坐牢': '有期徒刑 拘役',
+      '判刑': '有期徒刑 拘役',
+      '罰多少': '罰鍰 罰金',
+      '罰錢': '罰鍰 罰金',
+      '賠錢': '罰鍰 罰金',
+      '黑心油': '攙偽 假冒 變質 腐敗',
+      '餿水油': '攙偽 假冒 變質 腐敗',
+      '地溝油': '攙偽 假冒 變質 腐敗',
+      '下架': '沒入 回收',
+      '收回': '沒入 回收',
+      '停業': '歇業 廢止',
+      '關門': '歇業 廢止'
+    };
+
+    let enhancedQuery = userMsg;
+    Object.entries(semanticMap).forEach(([colloquial, legal]) => {
+      if (userMsg.includes(colloquial)) {
+        enhancedQuery += ` ${legal}`;
+      }
+    });
+
+    // RAG Retrieval using enhanced query
+    const results = fuse.search(enhancedQuery).slice(0, 3);
     
     setTimeout(() => {
       let botResponse = '';
