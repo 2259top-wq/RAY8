@@ -54,11 +54,16 @@ function App() {
         </button>
       </div>
 
-      <main className="h-[calc(100vh-72px)]">
+      <main className="h-[calc(100vh-72px)] relative">
         {activeTab === 'dashboard' && <Dashboard />}
         {activeTab === 'graph' && <NetworkGraph />}
         {activeTab === 'zhonglian' && <ZhonglianGraph />}
         {activeTab === 'law' && <LawAssistant />}
+        
+        {/* Legal Disclaimer */}
+        <div className="absolute bottom-4 right-6 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm border border-gray-200 pointer-events-none z-50">
+          <p className="text-xs text-gray-500 font-medium">⚠️ 廠商與產品關聯為視覺化展示，<span className="text-red-500 font-bold">一切以政府最新公告為準</span>。</p>
+        </div>
       </main>
     </div>
   );
