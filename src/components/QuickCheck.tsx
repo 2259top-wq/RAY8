@@ -112,6 +112,10 @@ export default function QuickCheck() {
             )}
           </div>
         )}
+        
+        <div className="mt-8 text-center text-xs text-gray-400 font-medium pb-8">
+          ⚠️ 本系統掃雷結果係依據政府最新公告之「問題廠商與產品清單」進行比對，一切真實食安資訊與裁罰名單，請務必以衛福部食藥署官方公告為準。
+        </div>
       </div>
     </div>
   );

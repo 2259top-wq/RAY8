@@ -1,4 +1,4 @@
-import { CheckCircle2, ShieldCheck, Award, FileCheck } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Award, FileCheck, AlertTriangle } from 'lucide-react';
 
 const safeCompanies = [
   {
@@ -40,9 +40,18 @@ export default function GreenList() {
             <ShieldCheck className="w-16 h-16 text-green-600" />
           </div>
           <h1 className="text-4xl font-black text-gray-800 mb-4">安心白名單專區</h1>
-          <p className="text-gray-500 text-lg font-medium max-w-2xl mx-auto">
+          <p className="text-gray-500 text-lg font-medium max-w-2xl mx-auto mb-6">
             危機時刻，政府與您站在一起。以下列出經主動清查、送驗合格，且確認「未採購」問題油品之優良示範大廠。
           </p>
+          
+          <div className="bg-red-50 border-2 border-red-500 rounded-xl p-4 text-left max-w-3xl mx-auto mb-8 shadow-sm">
+            <h4 className="font-bold text-red-700 flex items-center gap-2 mb-1">
+              <AlertTriangle className="w-5 h-5" /> 系統建置聲明與免責條款
+            </h4>
+            <p className="text-sm text-red-600 font-medium">
+              本頁面目前顯示之廠商（如統一超商、鼎泰豐等）為**「系統介面展示用之虛擬範例資料」**。本系統做為架構展示，尚未介接衛福部食藥署即時 API。實務上線時，本區塊將由主管機關每日匯入官方核定之合格清單。**一切真實食安資訊，請務必以政府官方最新公告為準！**
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
