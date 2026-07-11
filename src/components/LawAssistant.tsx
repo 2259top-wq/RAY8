@@ -99,12 +99,14 @@ export default function LawAssistant() {
       '死人': '致人於死'
     };
 
-    let enhancedQuery = userMsg;
+    const legalTermsToAdd = new Set<string>();
     Object.entries(semanticMap).forEach(([colloquial, legal]) => {
       if (userMsg.includes(colloquial)) {
-        enhancedQuery += ` ${legal}`;
+        legal.split(' ').forEach(term => legalTermsToAdd.add(term));
       }
     });
+
+    const enhancedQuery = `${userMsg} ${Array.from(legalTermsToAdd).join(' ')}`.trim();
 
     // RAG Retrieval using enhanced query
     const results = fuse.search(enhancedQuery).slice(0, 3);
