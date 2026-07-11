@@ -7,6 +7,7 @@ import TaiwanHeatmap from './TaiwanHeatmap';
 // Dynamically calculate cityCounts and productData from the real zhonglian_data.json
 const cityCountsRaw: Record<string, number> = {};
 const productDataRaw: any[] = [];
+let totalBusinesses = 0;
 
 Object.entries(analysisData.productDetails).forEach(([productName, details]) => {
   productDataRaw.push({
@@ -14,6 +15,8 @@ Object.entries(analysisData.productDetails).forEach(([productName, details]) => 
     count: (details as any).count,
     businesses: (details as any).businesses
   });
+  
+  totalBusinesses += (details as any).count;
   
   (details as any).businesses.forEach((biz: any) => {
     const city = biz.city;
@@ -62,7 +65,7 @@ export default function Dashboard() {
             </div>
             <div>
               <p className="text-sm font-medium text-slate-400">受影響總業者數</p>
-              <h3 className="text-3xl font-bold text-slate-100">{analysisData.totalBusinesses} 家</h3>
+              <h3 className="text-3xl font-bold text-slate-100">{totalBusinesses} 家</h3>
             </div>
           </div>
         </div>
