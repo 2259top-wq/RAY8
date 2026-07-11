@@ -1,0 +1,30 @@
+{
+  "totalBusinesses": 0,
+  "cityCounts": {},
+  "productDetails": {
+    "經典肉鬆飯糰": {
+      "count": 0,
+      "businesses": []
+    },
+    "沙鍋魚頭風味飯糰": {
+      "count": 0,
+      "businesses": []
+    },
+    "咖哩雞肉飯": {
+      "count": 0,
+      "businesses": []
+    },
+    "大豆沙拉醬": {
+      "count": 0,
+      "businesses": []
+    },
+    "卡士達餡料": {
+      "count": 0,
+      "businesses": []
+    },
+    "一級黃豆油": {
+      "count": 0,
+      "businesses": []
+    }
+  }
+}

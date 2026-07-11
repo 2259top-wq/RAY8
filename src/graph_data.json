@@ -1,0 +1,3823 @@
+{
+  "nodes": [
+    {
+      "id": "supplier_fwusow",
+      "name": "福壽實業",
+      "group": "supplier",
+      "r": 30,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "supplier_taisun",
+      "name": "泰山企業",
+      "group": "supplier",
+      "r": 30,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "supplier_formosa",
+      "name": "福懋油脂",
+      "group": "supplier",
+      "r": 30,
+      "color": "#ef4444"
+    },
+    {
+      "id": "prod_55uK5bq35a",
+      "name": "益康大豆沙拉油 18L",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_1",
+      "name": "蔡O彤",
+      "city": "基隆市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_2",
+      "name": "三和行",
+      "city": "基隆市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5LiA57Sa6b",
+      "name": "一級黃豆油",
+      "group": "product",
+      "supplier": "supplier_fwusow",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_3",
+      "name": "聯華食品工業股份有限公司-基隆",
+      "city": "基隆市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rKZ5ouJ5r",
+      "name": "沙拉油-18L(泰山)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_4",
+      "name": "榮義盛行",
+      "city": "基隆市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_55uK5bq354",
+      "name": "益康烹調油(調合油)",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_5",
+      "name": "信興油行",
+      "city": "基隆市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_6",
+      "name": "晨皓食品貿易有限公司",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_7",
+      "name": "故宮晶華股份有限公司",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rKZ5ouJ5r",
+      "name": "沙拉油 18Ｌ(福壽)",
+      "group": "product",
+      "supplier": "supplier_fwusow",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_8",
+      "name": "勤穩貿易有限公司",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rKZ5ouJ5r",
+      "name": "沙拉油－塑桶 3L",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_9",
+      "name": "新祥紀食品有限公司",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_10",
+      "name": "晶華國際酒店股份有限公司",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_11",
+      "name": "德諱興業有限公司",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_12",
+      "name": "康達盛通生活事業股份有限公司",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_13",
+      "name": "李O憲",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_14",
+      "name": "暉利實業有限公司",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_15",
+      "name": "邢O玲",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_16",
+      "name": "聯友食品免洗有限公司",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_17",
+      "name": "周O青",
+      "city": "臺北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_18",
+      "name": "老協珍股份有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5YGl5ZGz6a",
+      "name": "健味香油 3L",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_19",
+      "name": "津鼎有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_20",
+      "name": "許O福",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_21",
+      "name": "山海全企業有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_22",
+      "name": "宏麗食品有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_23",
+      "name": "樂晴食品有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_24",
+      "name": "菖駿企業社",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_55uK5bq35a",
+      "name": "益康大豆沙拉油 18KG",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_25",
+      "name": "泰佶食品行",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_26",
+      "name": "翟恩思整合行銷有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_27",
+      "name": "貴族世家企業股份有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_28",
+      "name": "宏鑫食品有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_29",
+      "name": "谷倉倉庫",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_30",
+      "name": "立倉興業有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_31",
+      "name": "利倉米店",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_32",
+      "name": "東穎食品實業有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_33",
+      "name": "吉豐雜糧行",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_34",
+      "name": "桂冠實業股份有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_35",
+      "name": "帛盈貿易有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_36",
+      "name": "明光食品有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_37",
+      "name": "尚興榮企業社",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_38",
+      "name": "明遠雜糧行",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_39",
+      "name": "豐榆有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_40",
+      "name": "國豐商行有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_41",
+      "name": "路易莎職人咖啡股份有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_42",
+      "name": "布列德麵包股份有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_43",
+      "name": "健衢生技有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_44",
+      "name": "大王肉脯店",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_6YeR6YWl6I",
+      "name": "金酥耐炸油-18L 環保鐵桶沙拉油-18Kg",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_45",
+      "name": "瑔盛-油脂",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_46",
+      "name": "元太興有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_47",
+      "name": "鼎旭發有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_55Kw5L+d6Z",
+      "name": "環保鐵桶沙拉油-18Kg",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_48",
+      "name": "豐益糧行",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_49",
+      "name": "台灣優良農產運銷有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_50",
+      "name": "名陽食品有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_51",
+      "name": "家品商行",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_52",
+      "name": "蘋園實業有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_53",
+      "name": "楊O仁",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_54",
+      "name": "農昌商行",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_55",
+      "name": "龍鋒商行",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_56",
+      "name": "華福食品股份有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_57",
+      "name": "安穀食品行",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_58",
+      "name": "擘進企業有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rKZ5ouJ5r",
+      "name": "沙拉油 18Ｌ(福壽) 益康大豆沙拉油 18L",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_59",
+      "name": "高聖泰國際企業有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_60",
+      "name": "齊魯食品有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_61",
+      "name": "尚倢食品有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_62",
+      "name": "穀良食品有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_63",
+      "name": "廣達香食品股份有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_64",
+      "name": "鴻記燒臘便當快餐店",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_65",
+      "name": "長福食品有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rOw5bGx57",
+      "name": "泰山精選蔬菜油-3L*6 泰山花生風味調和油2L*6入 泰山不飽和大豆沙拉油2.6L*6入(新版)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_66",
+      "name": "旭慶實業有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_6YeR6YWl6I",
+      "name": "金酥耐炸油-18L 沙拉油-18L(泰山) 沙拉油 18Ｌ(福壽)",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_67",
+      "name": "睿頡雜糧行",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_68",
+      "name": "禾禾園國際貿易有限公司",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_69",
+      "name": "廣益雜糧行",
+      "city": "新北市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_70",
+      "name": "建樹-桃園",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_71",
+      "name": "野味企業有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_72",
+      "name": "山珍食品有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_73",
+      "name": "璿民有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_74",
+      "name": "饒O華",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_75",
+      "name": "芳水有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_76",
+      "name": "葉O紅",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_77",
+      "name": "建晟食品有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_78",
+      "name": "點線麵餐飲(股)公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rKZ5ouJ5r",
+      "name": "沙拉油－塑桶 3L 益康大豆沙拉油 18L",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_79",
+      "name": "沅隆食品有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_80",
+      "name": "總舖師食品有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_81",
+      "name": "遠耀貿易有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rOw5bGx5a",
+      "name": "泰山大豆沙拉油0.6L*12入(新版)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_82",
+      "name": "來來物流大溪",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_83",
+      "name": "泰康食品企業社",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_84",
+      "name": "福泰團膳股份有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_85",
+      "name": "勁宏企業社",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_6YeR6YWl6I",
+      "name": "金酥耐炸油-18L 泰山花生風味調和油2L*6入 沙拉油-18L(泰山)",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_86",
+      "name": "華全有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_87",
+      "name": "明星商行",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_88",
+      "name": "參發商行",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_89",
+      "name": "緯柏國際貿易有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_90",
+      "name": "大地農產有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_91",
+      "name": "三億行",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rOw5bGx6I",
+      "name": "泰山花生風味調和油2L*6入 泰山不飽和大豆沙拉油2.6L*6入(新版)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_92",
+      "name": "家樂福環東倉",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_55uK5bq35a",
+      "name": "益康大豆沙拉油 18L 沙拉油 18Ｌ(福壽) 健味香油 3L 沙拉油 18Ｌ(福壽)",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_93",
+      "name": "美食家食材通路股份有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_94",
+      "name": "富煒食品有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_95",
+      "name": "龍膳坊企業有限公司",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rOw5bGx5L",
+      "name": "泰山不飽和大豆沙拉油2.6L*6入(新版)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_96",
+      "name": "弘達流通(股)公司-觀音倉",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_97",
+      "name": "全日物流股份有限公司(Y1觀音常溫倉)",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_98",
+      "name": "名揚商行新竹",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rOw5bGx57",
+      "name": "泰山精選蔬菜油-3L*6 泰山好理調合油-2L*6 泰山花生風味調和油2L*6入 泰山歐式果實精華調合油1.5L*6入 泰山好理調合油0.6L*24 泰山不飽和大豆沙拉油2.6L*6入(新版) 泰山大豆沙拉油0.6L*12入(新版)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_99",
+      "name": "泰山公司北配倉(調撥用)",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_100",
+      "name": "泰山北倉-宏大(大園)",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_101",
+      "name": "聯華食品工業股份有限公司-中壢",
+      "city": "桃園市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_102",
+      "name": "鼎生食品有限公司",
+      "city": "新竹市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_103",
+      "name": "豐炘商行",
+      "city": "新竹市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_104",
+      "name": "典佑食品股份有限公司",
+      "city": "新竹市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_105",
+      "name": "旺旺來金山商行",
+      "city": "新竹市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_106",
+      "name": "元昇食品有限公司",
+      "city": "新竹市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_107",
+      "name": "御品國際餐飲股份有限公司",
+      "city": "新竹市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_108",
+      "name": "春上股份有限公司",
+      "city": "新竹縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_109",
+      "name": "竹琦食品股份有限公司",
+      "city": "新竹縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_110",
+      "name": "鑫邑商行",
+      "city": "新竹縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_111",
+      "name": "聯合利華股份有限公司",
+      "city": "新竹縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_112",
+      "name": "聯有企業股份有限公司",
+      "city": "苗栗縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_113",
+      "name": "零售-謝O齡",
+      "city": "苗栗縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_114",
+      "name": "詮紘食品有限公司",
+      "city": "苗栗縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_115",
+      "name": "口美商社",
+      "city": "苗栗縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_116",
+      "name": "侑嘉詮企業有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_117",
+      "name": "寶喆食品有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_118",
+      "name": "和岱有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_119",
+      "name": "品欣食品商行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_120",
+      "name": "明昱商行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_121",
+      "name": "巨盛洋行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_122",
+      "name": "美升鮮台中倉",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_123",
+      "name": "億錦德商行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_6YeR6YWl6I",
+      "name": "金酥耐炸油-18L 環保鐵桶沙拉油-18Kg 沙拉油-18L(泰山) 益康大豆沙拉油 18L 沙拉油－塑桶 3L",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_124",
+      "name": "連興油行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_125",
+      "name": "鴻昌商行倉庫",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rKZ5ouJ5r",
+      "name": "沙拉油-18L(泰山) 沙拉油－塑桶 3L 益康大豆沙拉油 18L",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_126",
+      "name": "金食在食材有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_55Kw5L+d6Z",
+      "name": "環保鐵桶沙拉油-18Kg 泰山不飽和大豆沙拉油2.6L*6入(新版)",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_127",
+      "name": "茗洋企業有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rOw5bGx57",
+      "name": "泰山精選蔬菜油-3L*6 泰山花生風味調和油2L*6入 泰山好理調合油0.6L*24 泰山好理調合油-2L*6 泰山不飽和大豆沙拉油2.6L*6入(新版)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_128",
+      "name": "弘達流通(股)公司-梧棲倉",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rOw5bGx6I",
+      "name": "泰山花生風味調和油2L*6入 泰山大豆沙拉油0.6L*12入(新版)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_129",
+      "name": "今春企業股份有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_130",
+      "name": "森御盒膳股份有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_131",
+      "name": "永順豐商行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_132",
+      "name": "張O棟",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_133",
+      "name": "富達食品有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_134",
+      "name": "仁偉商行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_135",
+      "name": "米谷食品有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_136",
+      "name": "味源股份有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_137",
+      "name": "大買家股份有限公司大里國光分公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_138",
+      "name": "長鑫商行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_139",
+      "name": "頂裕食品股份有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_140",
+      "name": "國成食品有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_141",
+      "name": "聯發商行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_142",
+      "name": "詠益商行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_143",
+      "name": "旭安國際有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_55uK5bq35a",
+      "name": "益康大豆沙拉油 18L 沙拉油－塑桶 3L",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_144",
+      "name": "豪運商行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_145",
+      "name": "福大興行",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_146",
+      "name": "永昌南北雜貨有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_147",
+      "name": "群用企業有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_148",
+      "name": "陳O原",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_55uK5bq35a",
+      "name": "益康大豆沙拉油 18L 沙拉油 18Ｌ(福壽)",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_149",
+      "name": "竹記有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_150",
+      "name": "杰釩有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_151",
+      "name": "金安信食品有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_152",
+      "name": "鼎鎂國際企業有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_153",
+      "name": "森沂商行有限公司",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_154",
+      "name": "吳O泩倉庫",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_155",
+      "name": "李O滿",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_156",
+      "name": "廖O財",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_157",
+      "name": "溢鼎鱻海鮮館漁港店",
+      "city": "臺中市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_158",
+      "name": "黃O以",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_55uK5bq354",
+      "name": "益康烹調油(調合油) 沙拉油-18L(泰山)",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_159",
+      "name": "潔香行",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_160",
+      "name": "林O樵",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_161",
+      "name": "江O品倉庫",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_162",
+      "name": "花盒子北斗倉",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_163",
+      "name": "聯華食品工業股份有限公司-彰化",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_164",
+      "name": "禾家香食品股份有限公司",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_165",
+      "name": "巧福實業股份有限公司",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_166",
+      "name": "年展商行",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_167",
+      "name": "合泰商行",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_168",
+      "name": "福順發商行",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_169",
+      "name": "智安商行",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_170",
+      "name": "志宏食品股份有限公司",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_171",
+      "name": "豐進行食品股份有限公司",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_172",
+      "name": "漢寶增豐牧場",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_173",
+      "name": "如是我聞食品有限公司",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_174",
+      "name": "佳順免洗餐具商行",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_175",
+      "name": "上佳鑫商行",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_176",
+      "name": "苔凱行",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_55uK5bq354",
+      "name": "益康烹調油(調合油) 泰山不飽和大豆沙拉油2.6L*6入(新版) 環保鐵桶沙拉油-18Kg",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_177",
+      "name": "和誠實業有限公司",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_178",
+      "name": "上發行",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_179",
+      "name": "金尚旺商行",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_180",
+      "name": "大之禹總匯商行林森營業所",
+      "city": "彰化縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_181",
+      "name": "都源國際有限公司",
+      "city": "南投縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_182",
+      "name": "華南食品工業(股)公司",
+      "city": "南投縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_183",
+      "name": "台灣卜蜂企業股份有限公司南投肉品加工廠",
+      "city": "南投縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_184",
+      "name": "游O良",
+      "city": "南投縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_185",
+      "name": "祥鼎食品有限公司",
+      "city": "南投縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_186",
+      "name": "旺真久企業商行",
+      "city": "南投縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_187",
+      "name": "多吉師食品有限公司",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rKZ5ouJ5r",
+      "name": "沙拉油-18L(泰山) 益康大豆沙拉油 18L",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_188",
+      "name": "樺頻商行",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_189",
+      "name": "味王股份有限公司",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_190",
+      "name": "南門食品原料有限公司",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_191",
+      "name": "福懋興業股份有限公司職工福利委員會",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_192",
+      "name": "丞億貿易有限公司",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_193",
+      "name": "林O政",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_194",
+      "name": "張O發",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_195",
+      "name": "林O隆",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_196",
+      "name": "峰妙商行",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_197",
+      "name": "嘉盛農產行-門市",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_198",
+      "name": "誠泰食品有限公司",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_199",
+      "name": "玉品實業有限公司",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_200",
+      "name": "南亞塑膠工業股份有限公司",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_201",
+      "name": "久代商行",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_202",
+      "name": "廖O盛",
+      "city": "雲林縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_203",
+      "name": "海寶粉行",
+      "city": "嘉義市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_204",
+      "name": "謝O佑",
+      "city": "嘉義縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_205",
+      "name": "竑鑫食品有限公司",
+      "city": "嘉義縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_206",
+      "name": "典佑商行有限公司",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_207",
+      "name": "宏原行",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_208",
+      "name": "華信商行有限公司-倉庫",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5Y+w5Y2X54",
+      "name": "台南物流倉庫 金酥耐炸油-18L 沙拉油-18L(泰山)",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_209",
+      "name": "樂豐",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_210",
+      "name": "原香有限公司",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rOw5bGx5q",
+      "name": "泰山歐式果實精華調合油1.5L*6入 泰山大豆沙拉油0.6L*12入(新版)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_211",
+      "name": "明輝菸酒有限公司",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_212",
+      "name": "得新商行",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_213",
+      "name": "日盛",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_214",
+      "name": "黃O德",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_215",
+      "name": "鴻達鑫企業",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_216",
+      "name": "新農科技股份有限公司",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_217",
+      "name": "晟隆貿易企業社",
+      "city": "臺南市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_218",
+      "name": "現兌-大社營業所",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_219",
+      "name": "福桂有限公司",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_220",
+      "name": "味橋食材股份有限公司",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_221",
+      "name": "爭鮮股份有限公司",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_222",
+      "name": "隆億商號",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_223",
+      "name": "東泉行",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_224",
+      "name": "維義事業股份有限公司",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_225",
+      "name": "洊發有限公司倉庫",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_226",
+      "name": "好玖行倉庫",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rOw5bGx5a",
+      "name": "泰山好理調合油-2L*6 泰山不飽和大豆沙拉油2.6L*6入(新版)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_227",
+      "name": "駿騰企業有限公司",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_228",
+      "name": "零售-民旭工業股份有限公司",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_229",
+      "name": "安盛貿易有限公司",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_230",
+      "name": "黃O堅",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_231",
+      "name": "冠頂食材股份有限公司",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_232",
+      "name": "家福--油脂F393岡山倉",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_233",
+      "name": "瑞庭商行【新倉】",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_234",
+      "name": "明德食品工業股份有限公司",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_235",
+      "name": "頂記企業社",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_236",
+      "name": "森森家企業行",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_237",
+      "name": "威淳食品有限公司",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_238",
+      "name": "建樹-高雄",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_239",
+      "name": "巧竺商行",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_240",
+      "name": "邱O蓉",
+      "city": "高雄市",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_241",
+      "name": "林O豪",
+      "city": "屏東縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_242",
+      "name": "台灣有明食品股份有限公司",
+      "city": "屏東縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_243",
+      "name": "崁頂義豐麻油廠",
+      "city": "屏東縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_244",
+      "name": "建泰號",
+      "city": "屏東縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_245",
+      "name": "立鼎食品行",
+      "city": "宜蘭縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_246",
+      "name": "翔發商行",
+      "city": "宜蘭縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_247",
+      "name": "旭華行",
+      "city": "宜蘭縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_248",
+      "name": "誠毅商行",
+      "city": "宜蘭縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_249",
+      "name": "瑞廣企業有限公司",
+      "city": "宜蘭縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_250",
+      "name": "謝O恩",
+      "city": "宜蘭縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_251",
+      "name": "惠眾食品工業股份有限公司",
+      "city": "宜蘭縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_252",
+      "name": "隆盛食品冷凍股份有限公司",
+      "city": "宜蘭縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_5rOw5bGx5L",
+      "name": "泰山不飽和大豆沙拉油2.6L*6入(新版) 泰山大豆沙拉油0.6L*12入(新版)",
+      "group": "product",
+      "supplier": "supplier_taisun",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_253",
+      "name": "陳曜股份有限公司",
+      "city": "花蓮縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "prod_55uK5bq354",
+      "name": "益康烹調油(調合油) 健味香油 3L",
+      "group": "product",
+      "supplier": "supplier_formosa",
+      "r": 15,
+      "color": "#10b981"
+    },
+    {
+      "id": "biz_254",
+      "name": "相正企業有限公司",
+      "city": "花蓮縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_255",
+      "name": "全勝行",
+      "city": "花蓮縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_256",
+      "name": "信輝商行",
+      "city": "臺東縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    },
+    {
+      "id": "biz_257",
+      "name": "豐益商行",
+      "city": "金門縣",
+      "group": "business",
+      "r": 8,
+      "color": "#a8a29e"
+    }
+  ],
+  "links": [
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55uK5bq35a",
+      "value": 3
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_1",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_2",
+      "value": 1
+    },
+    {
+      "source": "supplier_fwusow",
+      "target": "prod_5LiA57Sa6b",
+      "value": 3
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_3",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rKZ5ouJ5r",
+      "value": 3
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_4",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55uK5bq354",
+      "value": 3
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_5",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_6",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_7",
+      "value": 1
+    },
+    {
+      "source": "supplier_fwusow",
+      "target": "prod_5rKZ5ouJ5r",
+      "value": 3
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_8",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_5rKZ5ouJ5r",
+      "value": 3
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_9",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_10",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_11",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_12",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_13",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_14",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_15",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_16",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_17",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_18",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_5YGl5ZGz6a",
+      "value": 3
+    },
+    {
+      "source": "prod_5YGl5ZGz6a",
+      "target": "biz_19",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_20",
+      "value": 1
+    },
+    {
+      "source": "prod_5YGl5ZGz6a",
+      "target": "biz_21",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_22",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_23",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_24",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55uK5bq35a",
+      "value": 3
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_25",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_26",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_27",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_28",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_29",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_30",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_31",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_32",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_33",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_34",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_35",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_36",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_37",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_38",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_39",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_40",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_41",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_42",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_43",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_44",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_6YeR6YWl6I",
+      "value": 3
+    },
+    {
+      "source": "prod_6YeR6YWl6I",
+      "target": "biz_45",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_46",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_47",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55Kw5L+d6Z",
+      "value": 3
+    },
+    {
+      "source": "prod_55Kw5L+d6Z",
+      "target": "biz_48",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_49",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_50",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_51",
+      "value": 1
+    },
+    {
+      "source": "prod_6YeR6YWl6I",
+      "target": "biz_52",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_53",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_54",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_55",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_56",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_57",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_58",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_5rKZ5ouJ5r",
+      "value": 3
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_59",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_60",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_61",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_62",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_63",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_64",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_65",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rOw5bGx57",
+      "value": 3
+    },
+    {
+      "source": "prod_5rOw5bGx57",
+      "target": "biz_66",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_6YeR6YWl6I",
+      "value": 3
+    },
+    {
+      "source": "prod_6YeR6YWl6I",
+      "target": "biz_67",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_68",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_69",
+      "value": 1
+    },
+    {
+      "source": "prod_5YGl5ZGz6a",
+      "target": "biz_70",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_71",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_72",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_73",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_74",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_75",
+      "value": 1
+    },
+    {
+      "source": "prod_5YGl5ZGz6a",
+      "target": "biz_76",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_77",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_78",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_5rKZ5ouJ5r",
+      "value": 3
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_79",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_80",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_81",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rOw5bGx5a",
+      "value": 3
+    },
+    {
+      "source": "prod_5rOw5bGx5a",
+      "target": "biz_82",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_83",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_84",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_85",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_6YeR6YWl6I",
+      "value": 3
+    },
+    {
+      "source": "prod_6YeR6YWl6I",
+      "target": "biz_86",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_87",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_88",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_89",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_90",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_91",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rOw5bGx6I",
+      "value": 3
+    },
+    {
+      "source": "prod_5rOw5bGx6I",
+      "target": "biz_92",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55uK5bq35a",
+      "value": 3
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_93",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_94",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_95",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rOw5bGx5L",
+      "value": 3
+    },
+    {
+      "source": "prod_5rOw5bGx5L",
+      "target": "biz_96",
+      "value": 1
+    },
+    {
+      "source": "prod_55Kw5L+d6Z",
+      "target": "biz_97",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_98",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rOw5bGx57",
+      "value": 3
+    },
+    {
+      "source": "prod_5rOw5bGx57",
+      "target": "biz_99",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx57",
+      "target": "biz_100",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_101",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_102",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_103",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_104",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_105",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_106",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_107",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_108",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_109",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_110",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_111",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx6I",
+      "target": "biz_112",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_113",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_114",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5a",
+      "target": "biz_115",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_116",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_117",
+      "value": 1
+    },
+    {
+      "source": "prod_5YGl5ZGz6a",
+      "target": "biz_118",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_119",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_120",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_121",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_122",
+      "value": 1
+    },
+    {
+      "source": "prod_55Kw5L+d6Z",
+      "target": "biz_123",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_6YeR6YWl6I",
+      "value": 3
+    },
+    {
+      "source": "prod_6YeR6YWl6I",
+      "target": "biz_124",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5a",
+      "target": "biz_125",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_5rKZ5ouJ5r",
+      "value": 3
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_126",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55Kw5L+d6Z",
+      "value": 3
+    },
+    {
+      "source": "prod_55Kw5L+d6Z",
+      "target": "biz_127",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rOw5bGx57",
+      "value": 3
+    },
+    {
+      "source": "prod_5rOw5bGx57",
+      "target": "biz_128",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rOw5bGx6I",
+      "value": 3
+    },
+    {
+      "source": "prod_5rOw5bGx6I",
+      "target": "biz_129",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_130",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_131",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_132",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_133",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_134",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_135",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_136",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_137",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_138",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_139",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_140",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5a",
+      "target": "biz_141",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_142",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_143",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55uK5bq35a",
+      "value": 3
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_144",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_145",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_146",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_147",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_148",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55uK5bq35a",
+      "value": 3
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_149",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_150",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_151",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_152",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_153",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5a",
+      "target": "biz_154",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_155",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_156",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_157",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_158",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55uK5bq354",
+      "value": 3
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_159",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_160",
+      "value": 1
+    },
+    {
+      "source": "prod_55Kw5L+d6Z",
+      "target": "biz_161",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_162",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_163",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_164",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_165",
+      "value": 1
+    },
+    {
+      "source": "prod_55Kw5L+d6Z",
+      "target": "biz_166",
+      "value": 1
+    },
+    {
+      "source": "prod_55Kw5L+d6Z",
+      "target": "biz_167",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_168",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_169",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_170",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx6I",
+      "target": "biz_171",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_172",
+      "value": 1
+    },
+    {
+      "source": "prod_55Kw5L+d6Z",
+      "target": "biz_173",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_174",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_175",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_176",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55uK5bq354",
+      "value": 3
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_177",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_178",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_179",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_180",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_181",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_182",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_183",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5L",
+      "target": "biz_184",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_185",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_186",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_187",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_5rKZ5ouJ5r",
+      "value": 3
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_188",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_189",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_190",
+      "value": 1
+    },
+    {
+      "source": "prod_55Kw5L+d6Z",
+      "target": "biz_191",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_192",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_193",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_194",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_195",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_196",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5L",
+      "target": "biz_197",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_198",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_199",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_200",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_201",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_202",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_203",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_204",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_205",
+      "value": 1
+    },
+    {
+      "source": "prod_5YGl5ZGz6a",
+      "target": "biz_206",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_207",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5a",
+      "target": "biz_208",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_5Y+w5Y2X54",
+      "value": 3
+    },
+    {
+      "source": "prod_5Y+w5Y2X54",
+      "target": "biz_209",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5a",
+      "target": "biz_210",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rOw5bGx5q",
+      "value": 3
+    },
+    {
+      "source": "prod_5rOw5bGx5q",
+      "target": "biz_211",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_212",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_213",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_214",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_215",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_216",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_217",
+      "value": 1
+    },
+    {
+      "source": "prod_5YGl5ZGz6a",
+      "target": "biz_218",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_219",
+      "value": 1
+    },
+    {
+      "source": "prod_5YGl5ZGz6a",
+      "target": "biz_220",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_221",
+      "value": 1
+    },
+    {
+      "source": "prod_5YGl5ZGz6a",
+      "target": "biz_222",
+      "value": 1
+    },
+    {
+      "source": "prod_5YGl5ZGz6a",
+      "target": "biz_223",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_224",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5q",
+      "target": "biz_225",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_226",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rOw5bGx5a",
+      "value": 3
+    },
+    {
+      "source": "prod_5rOw5bGx5a",
+      "target": "biz_227",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_228",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_229",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_230",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_231",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx6I",
+      "target": "biz_232",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5q",
+      "target": "biz_233",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_234",
+      "value": 1
+    },
+    {
+      "source": "prod_5rOw5bGx5L",
+      "target": "biz_235",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_236",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_237",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_238",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_239",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_240",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_241",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_242",
+      "value": 1
+    },
+    {
+      "source": "prod_5LiA57Sa6b",
+      "target": "biz_243",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_244",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_245",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_246",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_247",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_248",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_249",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_250",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_251",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq35a",
+      "target": "biz_252",
+      "value": 1
+    },
+    {
+      "source": "supplier_taisun",
+      "target": "prod_5rOw5bGx5L",
+      "value": 3
+    },
+    {
+      "source": "prod_5rOw5bGx5L",
+      "target": "biz_253",
+      "value": 1
+    },
+    {
+      "source": "supplier_formosa",
+      "target": "prod_55uK5bq354",
+      "value": 3
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_254",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_255",
+      "value": 1
+    },
+    {
+      "source": "prod_5rKZ5ouJ5r",
+      "target": "biz_256",
+      "value": 1
+    },
+    {
+      "source": "prod_55uK5bq354",
+      "target": "biz_257",
+      "value": 1
+    }
+  ]
+}
