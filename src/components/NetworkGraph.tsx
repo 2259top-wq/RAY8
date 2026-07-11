@@ -73,9 +73,21 @@ function Flow() {
     if (!searchQuery.trim()) return null;
     const fuse = new Fuse(searchIndex, { keys: ['name', 'tags', 'product', 'brandLabel'], threshold: 0.4, ignoreLocation: true });
     const results = fuse.search(searchQuery);
-    const bizIds = new Set(results.map(r => r.item.bizId));
-    const prodIds = new Set(results.map(r => r.item.prodId));
-    return { bizCount: bizIds.size, prodCount: prodIds.size };
+    
+    const bizNames = new Set<string>();
+    const prodNames = new Set<string>();
+    
+    results.forEach(r => {
+      bizNames.add(r.item.name);
+      prodNames.add(r.item.product);
+    });
+    
+    return { 
+      bizCount: bizNames.size, 
+      prodCount: prodNames.size,
+      bizNames: Array.from(bizNames),
+      prodNames: Array.from(prodNames)
+    };
   }, [searchQuery, searchIndex]);
 
   const downloadImage = () => {
@@ -404,6 +416,29 @@ function Flow() {
                 <span className="text-2xl font-black text-red-700">{searchStats.prodCount} <span className="text-xs font-medium text-red-500">項</span></span>
               </div>
             </div>
+
+            {/* Detailed Lists */}
+            {(searchStats.bizCount > 0 || searchStats.prodCount > 0) && (
+              <div className="mt-3 flex gap-2">
+                <div className="flex-1 bg-gray-50 rounded-lg p-2 border border-gray-200">
+                  <div className="text-[10px] text-gray-500 font-bold mb-1 border-b border-gray-200 pb-1">🏢 業者名單</div>
+                  <ul className="max-h-24 overflow-y-auto custom-scrollbar text-xs text-gray-700 space-y-1">
+                    {searchStats.bizNames.map((name, idx) => (
+                      <li key={idx} className="truncate" title={name}>• {name}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex-1 bg-gray-50 rounded-lg p-2 border border-gray-200">
+                  <div className="text-[10px] text-gray-500 font-bold mb-1 border-b border-gray-200 pb-1">🛢️ 油品名單</div>
+                  <ul className="max-h-24 overflow-y-auto custom-scrollbar text-xs text-gray-700 space-y-1">
+                    {searchStats.prodNames.map((name, idx) => (
+                      <li key={idx} className="truncate" title={name}>• {name}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+
             <button 
               onClick={downloadImage}
               className="mt-3 w-full flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-900 text-white py-2 rounded-xl text-xs font-bold transition-colors shadow-md"
