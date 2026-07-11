@@ -138,7 +138,7 @@ export default function LawAssistant() {
   };
 
   return (
-    <div className="p-8 max-w-5xl mx-auto animate-in fade-in duration-500 h-[calc(100vh-4rem)] flex flex-col">
+    <div className="p-4 md:p-8 pb-32 md:pb-24 max-w-5xl mx-auto animate-in fade-in duration-500 h-full flex flex-col">
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-gray-800 flex items-center gap-3">
           <Scale className="w-8 h-8 text-blue-500" />

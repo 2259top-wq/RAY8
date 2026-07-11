@@ -11,9 +11,9 @@ function App() {
   const [activeTab, setActiveTab] = useState('zhonglian');
 
   return (
-    <div className="min-h-screen bg-[#f5f5f5] text-[#333] font-sans">
+    <div className="h-screen bg-[#f5f5f5] text-[#333] font-sans flex flex-col overflow-hidden">
       {/* Top Navigation - Akira Style */}
-      <div className="w-full bg-white flex justify-center gap-2 p-4 shadow-[0_2px_4px_rgba(0,0,0,0.05)] flex-wrap relative z-50">
+      <div className="w-full bg-white flex justify-center gap-2 p-4 shadow-[0_2px_4px_rgba(0,0,0,0.05)] flex-wrap relative z-50 flex-shrink-0">
         <button
           onClick={() => setActiveTab('graph')}
           className={`px-6 py-2.5 rounded-md font-bold text-[0.95rem] transition-all duration-200 ${
@@ -84,7 +84,7 @@ function App() {
         </button>
       </div>
 
-      <main className="h-[calc(100vh-72px)] relative">
+      <main className="flex-1 relative overflow-auto custom-scrollbar">
         {activeTab === 'dashboard' && <Dashboard />}
         {activeTab === 'graph' && <NetworkGraph />}
         {activeTab === 'zhonglian' && <ZhonglianGraph />}
