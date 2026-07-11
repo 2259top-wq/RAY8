@@ -13,6 +13,7 @@
     "@xyflow/react": "^12.11.2",
     "dagre": "^0.8.5",
     "fuse.js": "^7.4.2",
+    "html-to-image": "^1.11.13",
     "lucide-react": "^1.24.0",
     "puppeteer": "^25.3.0",
     "react": "^19.2.7",

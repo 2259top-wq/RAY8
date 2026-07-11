@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState, useMemo } from 'react';
 import Fuse from 'fuse.js';
-import { Search, X } from 'lucide-react';
+import { toPng } from 'html-to-image';
+import { Search, X, Camera, AlertTriangle } from 'lucide-react';
 import {
   ReactFlow,
   Controls,
@@ -28,6 +29,15 @@ const brands = [
   { id: 'brand-fomosa', label: '福懋油脂', keyword: '福懋', color: '#FF9800', side: 'right' },
   { id: 'brand-fwusow', label: '福壽實業', keyword: '福壽', color: '#2196F3', side: 'right' },
   { id: 'brand-taisun', label: '泰山企業', keyword: '泰山', color: '#4CAF50', side: 'left' }
+];
+
+const quickFilters = [
+  { label: '🍪 餅乾零食', query: '餅乾' },
+  { label: '🥟 冷凍食品', query: '冷凍' },
+  { label: '🧂 調味料', query: '調味' },
+  { label: '☕ 烘焙咖啡', query: '烘焙' },
+  { label: '🍱 餐飲便當', query: '餐飲' },
+  { label: '🛒 量販超市', query: '大賣場' }
 ];
 
 function Flow() {
@@ -58,6 +68,26 @@ function Flow() {
     });
     return items;
   }, []);
+
+  const searchStats = useMemo(() => {
+    if (!searchQuery.trim()) return null;
+    const fuse = new Fuse(searchIndex, { keys: ['name', 'tags', 'product', 'brandLabel'], threshold: 0.4, ignoreLocation: true });
+    const results = fuse.search(searchQuery);
+    const bizIds = new Set(results.map(r => r.item.bizId));
+    const prodIds = new Set(results.map(r => r.item.prodId));
+    return { bizCount: bizIds.size, prodCount: prodIds.size };
+  }, [searchQuery, searchIndex]);
+
+  const downloadImage = () => {
+    const flowElement = document.querySelector('.react-flow') as HTMLElement;
+    if (!flowElement) return;
+    toPng(flowElement, { backgroundColor: '#f5f5f5', quality: 1, pixelRatio: 2 }).then((dataUrl) => {
+      const a = document.createElement('a');
+      a.setAttribute('download', `食安追溯報告-${searchQuery || '全覽'}.png`);
+      a.setAttribute('href', dataUrl);
+      a.click();
+    });
+  };
 
   const buildGraph = useCallback(() => {
     const fuse = new Fuse(searchIndex, {
@@ -321,16 +351,17 @@ function Flow() {
         </button>
       </div>
 
-      {/* Floating Search Bar */}
-      <div className="absolute top-8 right-8 z-10 flex flex-col gap-2 pointer-events-none">
-        <div className="bg-white/90 backdrop-blur-md p-2 rounded-2xl shadow-xl border border-gray-200 flex items-center pointer-events-auto transition-all focus-within:ring-2 focus-within:ring-blue-500 w-80">
+      {/* Floating Search Bar & Dashboard */}
+      <div className="absolute top-8 right-8 z-10 flex flex-col gap-3 pointer-events-none items-end">
+        {/* Search Input */}
+        <div className="bg-white/95 backdrop-blur-md p-2 rounded-2xl shadow-xl border border-gray-200 flex items-center pointer-events-auto transition-all focus-within:ring-2 focus-within:ring-blue-500 w-[340px]">
           <Search className="w-5 h-5 text-gray-400 ml-2 mr-2" />
           <input
             type="text"
             placeholder="X光透視：搜尋「餅乾」或「便當」..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="flex-1 bg-transparent border-none focus:outline-none text-gray-700 placeholder-gray-400 font-medium py-1"
+            className="flex-1 bg-transparent border-none focus:outline-none text-gray-800 placeholder-gray-400 font-medium py-1.5"
           />
           {searchQuery && (
             <button onClick={() => setSearchQuery('')} className="p-1 hover:bg-gray-100 rounded-full text-gray-500 transition-colors">
@@ -338,9 +369,48 @@ function Flow() {
             </button>
           )}
         </div>
-        {searchQuery.trim().length > 0 && (
-          <div className="text-xs font-bold text-blue-600 bg-blue-50/90 px-3 py-1.5 rounded-lg ml-auto shadow-sm border border-blue-100 pointer-events-auto">
-            ⚡ X光透視模式啟動中
+
+        {/* Quick Filters */}
+        <div className="flex flex-wrap gap-1.5 justify-end w-[340px] pointer-events-auto">
+          {quickFilters.map((filter) => (
+            <button
+              key={filter.label}
+              onClick={() => setSearchQuery(filter.query)}
+              className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all shadow-sm ${
+                searchQuery === filter.query
+                  ? 'bg-blue-600 text-white border-blue-600'
+                  : 'bg-white text-gray-600 border border-gray-200 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200'
+              }`}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Impact Summary Dashboard */}
+        {searchQuery.trim().length > 0 && searchStats && (
+          <div className="bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-red-100 pointer-events-auto w-[340px] mt-2 animate-in slide-in-from-top-4 fade-in duration-300">
+            <div className="flex items-center gap-2 mb-2">
+              <AlertTriangle className="w-5 h-5 text-red-500" />
+              <h3 className="font-bold text-gray-800 text-sm">X光透視 災情統計</h3>
+            </div>
+            <div className="flex justify-between bg-red-50 p-3 rounded-xl border border-red-100">
+              <div className="flex flex-col items-center flex-1 border-r border-red-200">
+                <span className="text-xs text-red-600 font-bold mb-1">受害業者</span>
+                <span className="text-2xl font-black text-red-700">{searchStats.bizCount} <span className="text-xs font-medium text-red-500">家</span></span>
+              </div>
+              <div className="flex flex-col items-center flex-1">
+                <span className="text-xs text-red-600 font-bold mb-1">牽連油品</span>
+                <span className="text-2xl font-black text-red-700">{searchStats.prodCount} <span className="text-xs font-medium text-red-500">項</span></span>
+              </div>
+            </div>
+            <button 
+              onClick={downloadImage}
+              className="mt-3 w-full flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-900 text-white py-2 rounded-xl text-xs font-bold transition-colors shadow-md"
+            >
+              <Camera className="w-4 h-4" />
+              📥 匯出當前畫面 (PNG)
+            </button>
           </div>
         )}
       </div>
