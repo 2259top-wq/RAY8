@@ -52,6 +52,14 @@ function App() {
         >
           法規 RAG 助理
         </button>
+        
+        {/* Dedicated Search Routing Button */}
+        <button
+          onClick={() => setActiveTab('graph')}
+          className="ml-4 px-6 py-2.5 rounded-md font-bold text-[0.95rem] transition-all duration-200 bg-blue-50 text-blue-600 hover:bg-blue-100 shadow-sm border border-blue-200 flex items-center gap-2 animate-pulse"
+        >
+          🔍 進入 X光透視搜尋
+        </button>
       </div>
 
       <main className="h-[calc(100vh-72px)] relative">
