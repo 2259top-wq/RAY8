@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import analysisData from '../analysis_data.json';
 import { Map, Package, X, Building2 } from 'lucide-react';
+import TaiwanHeatmap from './TaiwanHeatmap';
 
 const cityData = Object.entries(analysisData.cityCounts).map(([name, count]) => ({ name, count }));
 const productData = Object.values(analysisData.productsByBrand)
@@ -74,6 +75,9 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+
+      {/* Taiwan Geographic Impact Heatmap */}
+      <TaiwanHeatmap cityCounts={analysisData.cityCounts} />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-slate-800/30 border border-slate-700 p-6 rounded-xl">

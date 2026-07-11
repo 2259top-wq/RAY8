@@ -3,6 +3,8 @@ import NetworkGraph from './components/NetworkGraph';
 import Dashboard from './components/Dashboard';
 import LawAssistant from './components/LawAssistant';
 import ZhonglianGraph from './components/ZhonglianGraph';
+import QuickCheck from './components/QuickCheck';
+import GreenList from './components/GreenList';
 import './App.css';
 
 function App() {
@@ -52,6 +54,26 @@ function App() {
         >
           法規 RAG 助理
         </button>
+        <button
+          onClick={() => setActiveTab('greenList')}
+          className={`px-6 py-2.5 rounded-md font-bold text-[0.95rem] transition-all duration-200 ${
+            activeTab === 'greenList' 
+              ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-md' 
+              : 'bg-green-50 hover:bg-green-100 text-green-700 border border-green-200'
+          }`}
+        >
+          🟢 安心白名單
+        </button>
+        <button
+          onClick={() => setActiveTab('quickCheck')}
+          className={`px-6 py-2.5 rounded-md font-bold text-[0.95rem] transition-all duration-200 ${
+            activeTab === 'quickCheck' 
+              ? 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-md' 
+              : 'bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200'
+          }`}
+        >
+          📱 民眾掃雷快查
+        </button>
         
         {/* Dedicated Search Routing Button */}
         <button
@@ -67,6 +89,8 @@ function App() {
         {activeTab === 'graph' && <NetworkGraph />}
         {activeTab === 'zhonglian' && <ZhonglianGraph />}
         {activeTab === 'law' && <LawAssistant />}
+        {activeTab === 'quickCheck' && <QuickCheck />}
+        {activeTab === 'greenList' && <GreenList />}
         
         {/* Legal Disclaimer */}
         <div className="absolute bottom-4 right-6 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm border border-gray-200 pointer-events-none z-50">
