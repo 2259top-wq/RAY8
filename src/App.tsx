@@ -92,9 +92,19 @@ function App() {
         {activeTab === 'quickCheck' && <QuickCheck />}
         {activeTab === 'greenList' && <GreenList />}
         
-        {/* Legal Disclaimer */}
-        <div className="absolute bottom-4 right-6 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm border border-gray-200 pointer-events-none z-50">
-          <p className="text-xs text-gray-500 font-medium">⚠️ 廠商與產品關聯為視覺化展示，<span className="text-red-500 font-bold">一切以政府最新公告為準</span>。</p>
+        {/* Global Data Source & Legal Disclaimer Footer */}
+        <div className="absolute bottom-0 left-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-200 px-6 py-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-40 flex flex-col md:flex-row justify-between items-center gap-2">
+          <div className="flex flex-col text-[11px] text-gray-500 font-medium">
+            <span className="font-bold text-gray-700 mb-1">📊 系統資料來源 (Data Sources) 與查證網址：</span>
+            <div className="flex flex-wrap gap-x-4 gap-y-1">
+              <a href="https://www.fda.gov.tw/TC/site.aspx?sid=4069" target="_blank" rel="noreferrer" className="hover:text-blue-600 transition-colors">1. 衛福部食藥署 - 劣質豬油事件受波及廠商清單 (政府開放資料)</a>
+              <a href="https://www.mirrormedia.mg/" target="_blank" rel="noreferrer" className="hover:text-blue-600 transition-colors">2. 鏡週刊 Mirror Media - 品牌與終端產品清單整理</a>
+              <a href="https://www.cw.com.tw/" target="_blank" rel="noreferrer" className="hover:text-blue-600 transition-colors">3. 天下雜誌 - 受害企業名單彙整與追蹤</a>
+            </div>
+          </div>
+          <div className="text-[10px] text-red-500 font-bold bg-red-50 px-3 py-1.5 rounded-md border border-red-100 whitespace-nowrap">
+            ⚠️ 廠商與產品關聯為視覺化展示，一切裁罰與名單以政府最新公告為準。
+          </div>
         </div>
       </main>
     </div>
