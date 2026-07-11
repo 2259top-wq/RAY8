@@ -1,4 +1,6 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useMemo } from 'react';
+import Fuse from 'fuse.js';
+import { Search, X } from 'lucide-react';
 import {
   ReactFlow,
   Controls,
@@ -35,9 +37,57 @@ function Flow() {
     Object.values(analysisData.productsByBrand).flatMap(products => products.map(p => `prod-${p.name}`))
   );
   const [activeBrand, setActiveBrand] = useState<string>('ALL');
+  const [searchQuery, setSearchQuery] = useState('');
   const { fitView } = useReactFlow();
 
+  const searchIndex = useMemo(() => {
+    const items: any[] = [];
+    Object.entries(analysisData.productsByBrand).forEach(([brandLabel, products]) => {
+      products.forEach(p => {
+        p.businesses.forEach((b: any) => {
+          items.push({
+            bizId: `biz-${b.id}`,
+            prodId: `prod-${p.name}`,
+            brandLabel: brandLabel,
+            name: b.name,
+            tags: b.tags ? b.tags.join(' ') : '',
+            product: p.name
+          });
+        });
+      });
+    });
+    return items;
+  }, []);
+
   const buildGraph = useCallback(() => {
+    const fuse = new Fuse(searchIndex, {
+      keys: ['name', 'tags', 'product', 'brandLabel'],
+      threshold: 0.4,
+      ignoreLocation: true
+    });
+
+    let matchedBizIds = new Set<string>();
+    let matchedProdIds = new Set<string>();
+    let matchedBrandLabels = new Set<string>();
+    const isSearching = searchQuery.trim().length > 0;
+
+    if (isSearching) {
+      const results = fuse.search(searchQuery);
+      results.forEach(r => {
+        matchedBizIds.add(r.item.bizId);
+        matchedProdIds.add(r.item.prodId);
+        matchedBrandLabels.add(r.item.brandLabel);
+      });
+    }
+
+    const getOpacity = (id: string, type: 'biz' | 'prod' | 'brand' | 'brandLabel') => {
+      if (!isSearching) return 1;
+      if (type === 'biz' && matchedBizIds.has(id)) return 1;
+      if (type === 'prod' && matchedProdIds.has(id)) return 1;
+      if (type === 'brandLabel' && matchedBrandLabels.has(id)) return 1;
+      return 0.1;
+    };
+
     const leftNodes: Node[] = [];
     const leftEdges: Edge[] = [];
     const rightNodes: Node[] = [];
@@ -59,7 +109,8 @@ function Flow() {
         id: brand.id,
         type: 'brand',
         data: { label: brand.label, color: brand.color },
-        position: { x: 0, y: yOffset }
+        position: { x: 0, y: yOffset },
+        style: { opacity: getOpacity(brand.label, 'brandLabel'), transition: 'opacity 0.3s' }
       };
 
       const bEdge: Edge = {
@@ -67,7 +118,7 @@ function Flow() {
         source: 'center-root',
         target: brand.id,
         animated: true,
-        style: { stroke: brand.color, strokeWidth: 2, strokeDasharray: '5,5' }
+        style: { stroke: brand.color, strokeWidth: 2, strokeDasharray: '5,5', opacity: getOpacity(brand.label, 'brandLabel'), transition: 'opacity 0.3s' }
       };
 
       if (brand.side === 'left') {
@@ -96,7 +147,8 @@ function Flow() {
               );
             }
           },
-          position: { x: 0, y: 0 }
+          position: { x: 0, y: 0 },
+          style: { opacity: getOpacity(pNodeId, 'prod'), transition: 'opacity 0.3s' }
         };
 
         const pEdge: Edge = {
@@ -104,7 +156,7 @@ function Flow() {
           source: brand.id,
           target: pNodeId,
           animated: true,
-          style: { stroke: brand.color, strokeWidth: 1.5, strokeDasharray: '3,3' }
+          style: { stroke: brand.color, strokeWidth: 1.5, strokeDasharray: '3,3', opacity: getOpacity(pNodeId, 'prod'), transition: 'opacity 0.3s' }
         };
 
         if (brand.side === 'left') {
@@ -128,7 +180,8 @@ function Flow() {
               id: bizId,
               type: 'business',
               data: { label: biz.name, color: brand.color },
-              position: { x: 0, y: 0 }
+              position: { x: 0, y: 0 },
+              style: { opacity: getOpacity(bizId, 'biz'), transition: 'opacity 0.3s' }
             };
             productBizMap[pNodeId].push(bizNode);
 
@@ -137,7 +190,7 @@ function Flow() {
               source: pNodeId,
               target: bizId,
               animated: false,
-              style: { stroke: brand.color, strokeWidth: 1, opacity: 0.5 }
+              style: { stroke: brand.color, strokeWidth: 1, opacity: isSearching ? getOpacity(bizId, 'biz') : 0.5, transition: 'opacity 0.3s' }
             };
 
             // Edges and nodes are collected; layoutUtils will deduplicate the nodes globally
@@ -203,15 +256,17 @@ function Flow() {
     });
 
     const finalNodes = [...bgNodes, ...layouted.nodes];
-    console.log('Generated finalNodes:', finalNodes.length);
-    setNodes(finalNodes);
+    setNodes([
+      { id: 'center-root', type: 'center', data: { label: '問題油品追溯', color: '#607D8B' }, position: { x: 0, y: 0 } },
+      ...finalNodes
+    ]);
     setEdges(layouted.edges);
 
     setTimeout(() => {
-      fitView({ padding: 0.2, minZoom: 0.1, duration: 800 });
+      fitView({ padding: 0.2, duration: 800 });
     }, 100);
 
-  }, [expandedProducts, activeBrand, setNodes, setEdges, fitView]);
+  }, [expandedProducts, activeBrand, searchQuery, searchIndex, fitView, setNodes, setEdges]);
 
   useEffect(() => {
     buildGraph();
@@ -264,6 +319,30 @@ function Flow() {
         >
           重設視角
         </button>
+      </div>
+
+      {/* Floating Search Bar */}
+      <div className="absolute top-8 right-8 z-10 flex flex-col gap-2 pointer-events-none">
+        <div className="bg-white/90 backdrop-blur-md p-2 rounded-2xl shadow-xl border border-gray-200 flex items-center pointer-events-auto transition-all focus-within:ring-2 focus-within:ring-blue-500 w-80">
+          <Search className="w-5 h-5 text-gray-400 ml-2 mr-2" />
+          <input
+            type="text"
+            placeholder="X光透視：搜尋「餅乾」或「便當」..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="flex-1 bg-transparent border-none focus:outline-none text-gray-700 placeholder-gray-400 font-medium py-1"
+          />
+          {searchQuery && (
+            <button onClick={() => setSearchQuery('')} className="p-1 hover:bg-gray-100 rounded-full text-gray-500 transition-colors">
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+        {searchQuery.trim().length > 0 && (
+          <div className="text-xs font-bold text-blue-600 bg-blue-50/90 px-3 py-1.5 rounded-lg ml-auto shadow-sm border border-blue-100 pointer-events-auto">
+            ⚡ X光透視模式啟動中
+          </div>
+        )}
       </div>
 
       <div className="flex-1 w-full relative">
