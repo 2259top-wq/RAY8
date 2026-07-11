@@ -23,19 +23,16 @@ const nodeTypes = {
 };
 
 const brands = [
-  { id: 'brand-711', label: '統一企業', keyword: '飯糰', color: '#4CAF50', side: 'left' },
-  { id: 'brand-curry', label: '聯華食品', keyword: '咖哩', color: '#8BC34A', side: 'left' },
-  { id: 'brand-sauce', label: '桂冠實業', keyword: '沙拉醬', color: '#2196F3', side: 'right' },
-  { id: 'brand-baking', label: '義美食品', keyword: '餡料', color: '#03A9F4', side: 'right' },
-  { id: 'brand-other', label: '其他代工廠', keyword: '油', color: '#FF9800', side: 'right' }
+  { id: 'brand-fumao', label: '福懋油脂', keyword: '福懋油脂', color: '#E91E63', side: 'left' },
+  { id: 'brand-fushou', label: '福壽實業', keyword: '福壽實業', color: '#FF9800', side: 'right' },
+  { id: 'brand-taisun', label: '泰山企業', keyword: '泰山企業', color: '#2196F3', side: 'left' },
+  { id: 'brand-other', label: '其他代工廠', keyword: '其他代工廠', color: '#9E9E9E', side: 'right' }
 ];
 
 function Flow() {
   const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
-  const [expandedProducts, setExpandedProducts] = useState<string[]>(
-    Object.keys(analysisData.productDetails).map(name => `prod-${name}`)
-  );
+  const [expandedProducts, setExpandedProducts] = useState<string[]>([]);
   const [activeBrand, setActiveBrand] = useState<string>('ALL');
   const [renderError, setRenderError] = useState<string | null>(null);
   const { fitView } = useReactFlow();
@@ -52,7 +49,7 @@ function Flow() {
       const centerNode: Node = {
         id: 'center-root',
         type: 'center',
-        data: { label: '中聯油脂\n問題大豆沙拉油', color: '#607D8B' },
+        data: { label: '中聯油脂\n(油槽315)', color: '#607D8B' },
         position: { x: 0, y: 0 }
       };
 
@@ -81,8 +78,11 @@ function Flow() {
         });
       });
 
-      Object.entries(analysisData.productDetails).forEach(([prodName, details]) => {
-        let matchedBrand = brands.find(b => prodName.includes(b.keyword));
+      Object.entries(analysisData.productDetails).forEach(([prodKey, details]) => {
+        // prodKey is like "福懋油脂 - 益康大豆沙拉油"
+        const [brandLabel, prodName] = prodKey.split(' - ');
+        
+        let matchedBrand = brands.find(b => b.keyword === brandLabel);
         if (!matchedBrand) matchedBrand = brands.find(b => b.id === 'brand-other')!;
 
         if (activeBrand !== 'ALL' && matchedBrand.label !== activeBrand) return;
@@ -90,14 +90,14 @@ function Flow() {
         const isLeft = matchedBrand.side === 'left';
         const nList = isLeft ? leftNodes : rightNodes;
         const eList = isLeft ? leftEdges : rightEdges;
-        const prodId = `prod-${prodName}`;
+        const prodId = `prod-${prodKey}`;
         const isExpanded = expandedProducts.includes(prodId);
 
         nList.push({
           id: prodId,
           type: 'product',
           data: {
-            label: prodName,
+            label: `${prodName} (${(details as any).count}家)`,
             color: matchedBrand.color,
             onToggleExpand: () => {
               setExpandedProducts(prev => 
@@ -142,50 +142,6 @@ function Flow() {
       
       const finalNodes = [...layouted.nodes];
       
-      if (activeBrand === 'ALL' || activeBrand === '統一超商鮮食') {
-        const leftsideNodes = finalNodes.filter(n => leftNodes.find(ln => ln.id === n.id) || n.id.startsWith('biz-prod-阜杭') || n.id.startsWith('biz-prod-林聰明') || n.id.startsWith('biz-prod-佛蒙特'));
-        const xs = leftsideNodes.map(n => n.position.x).filter(x => !isNaN(x));
-        const ys = leftsideNodes.map(n => n.position.y).filter(y => !isNaN(y));
-        if (xs.length > 0 && ys.length > 0) {
-          const minX = Math.min(...xs) - 60;
-          const maxX = Math.max(...xs) + 60;
-          const minY = Math.min(...ys) - 60;
-          const maxY = Math.max(...ys) + 60;
-          finalNodes.unshift({
-            id: 'bg-left',
-            type: 'groupBg',
-            data: { label: '統一企業/聯華食品 (左路)', color: '#4CAF50', textColor: '#2E7D32', width: maxX - minX, height: maxY - minY },
-            position: { x: minX, y: minY },
-            draggable: false,
-            selectable: false,
-            focusable: false,
-            zIndex: -1
-          });
-        }
-      }
-
-      if (activeBrand === 'ALL' || activeBrand === '義美食品') {
-        const rightsideNodes = finalNodes.filter(n => rightNodes.find(rn => rn.id === n.id) || n.id.startsWith('biz-prod-卡士達') || n.id.startsWith('biz-prod-大豆') || n.id.startsWith('biz-prod-一級'));
-        const xs = rightsideNodes.map(n => n.position.x).filter(x => !isNaN(x));
-        const ys = rightsideNodes.map(n => n.position.y).filter(y => !isNaN(y));
-        if (xs.length > 0 && ys.length > 0) {
-          const minX = Math.min(...xs) - 60;
-          const maxX = Math.max(...xs) + 60;
-          const minY = Math.min(...ys) - 60;
-          const maxY = Math.max(...ys) + 60;
-          finalNodes.unshift({
-            id: 'bg-right',
-            type: 'groupBg',
-            data: { label: '義美食品/桂冠實業 (右路)', color: '#2196F3', textColor: '#1565C0', width: maxX - minX, height: maxY - minY },
-            position: { x: minX, y: minY },
-            draggable: false,
-            selectable: false,
-            focusable: false,
-            zIndex: -1
-          });
-        }
-      }
-
       setNodes(finalNodes);
       setEdges(layouted.edges);
       console.log('Nodes:', finalNodes);
