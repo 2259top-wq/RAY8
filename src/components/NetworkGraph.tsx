@@ -61,7 +61,9 @@ function Flow() {
             brandLabel: brandLabel,
             name: b.name,
             tags: b.tags ? b.tags.join(' ') : '',
-            product: p.name
+            product: p.name,
+            endProductsRaw: b.endProducts || [],
+            endProducts: b.endProducts ? b.endProducts.join(' ') : ''
           });
         });
       });
@@ -71,22 +73,27 @@ function Flow() {
 
   const searchStats = useMemo(() => {
     if (!searchQuery.trim()) return null;
-    const fuse = new Fuse(searchIndex, { keys: ['name', 'tags', 'product', 'brandLabel'], threshold: 0.4, ignoreLocation: true });
+    const fuse = new Fuse(searchIndex, { keys: ['name', 'tags', 'product', 'brandLabel', 'endProducts'], threshold: 0.4, ignoreLocation: true });
     const results = fuse.search(searchQuery);
     
     const bizNames = new Set<string>();
     const prodNames = new Set<string>();
+    const endProductNames = new Set<string>();
     
     results.forEach(r => {
       bizNames.add(r.item.name);
       prodNames.add(r.item.product);
+      if (r.item.endProductsRaw && r.item.endProductsRaw.length > 0) {
+        r.item.endProductsRaw.forEach((ep: string) => endProductNames.add(ep));
+      }
     });
     
     return { 
       bizCount: bizNames.size, 
       prodCount: prodNames.size,
       bizNames: Array.from(bizNames),
-      prodNames: Array.from(prodNames)
+      prodNames: Array.from(prodNames),
+      endProductNames: Array.from(endProductNames)
     };
   }, [searchQuery, searchIndex]);
 
@@ -436,6 +443,19 @@ function Flow() {
                     ))}
                   </ul>
                 </div>
+              </div>
+            )}
+
+            {searchStats.endProductNames && searchStats.endProductNames.length > 0 && (
+              <div className="mt-2 bg-red-50 rounded-lg p-2 border border-red-200">
+                <div className="text-[11px] text-red-600 font-bold mb-1 border-b border-red-200 pb-1 flex items-center gap-1">
+                  <span>🛒</span> 警示終端消費品
+                </div>
+                <ul className="max-h-32 overflow-y-auto custom-scrollbar text-xs font-bold text-red-700 space-y-1.5 mt-1.5">
+                  {searchStats.endProductNames.map((name, idx) => (
+                    <li key={idx} className="break-words leading-tight">• {name}</li>
+                  ))}
+                </ul>
               </div>
             )}
 

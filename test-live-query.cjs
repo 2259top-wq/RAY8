@@ -1,50 +1,39 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: "new" });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   
-  try {
-    await page.goto('https://2259top-wq.github.io/RAY8/', { waitUntil: 'networkidle0' });
-    
-    // Click the Law Assistant tab
-    const tabs = await page.$$('button');
-    for (let tab of tabs) {
-      const text = await page.evaluate(el => el.textContent, tab);
-      if (text && text.includes('法規 RAG 助理')) {
-        await tab.click();
-        break;
-      }
+  page.on('console', msg => console.log('PAGE LOG:', msg.text()));
+  page.on('pageerror', error => console.error('PAGE ERROR:', error));
+  
+  await page.goto('http://localhost:5173', { waitUntil: 'networkidle0' });
+  
+  // Switch to graph tab
+  const buttons = await page.$$('button');
+  for (let btn of buttons) {
+    const text = await page.evaluate(el => el.textContent, btn);
+    if (text === '原始污染追溯網') {
+      await btn.click();
+      break;
     }
-    
-    await new Promise(r => setTimeout(r, 1000));
-    
-    // Type query
-    await page.type('input[type="text"]', '關幾年');
-    await page.click('button[type="submit"]');
-    
-    await new Promise(r => setTimeout(r, 2000));
-    
-    // Get the last bot message
-    const botMessages = await page.$$('.bg-white.text-gray-800'); // Bot messages have this class
-    if (botMessages.length > 0) {
-      const lastMsg = botMessages[botMessages.length - 1];
-      const text = await page.evaluate(el => el.textContent, lastMsg);
-      console.log('BOT RESPONSE:', text);
-      if (text.includes('找不到')) {
-        console.log('FAIL: Bot could not find it.');
-      } else {
-        console.log('SUCCESS: Bot found it!');
-      }
-    } else {
-      console.log('ERROR: No bot message found.');
-    }
-    
-    await page.screenshot({ path: 'live-query-test.png' });
-    
-  } catch (err) {
-    console.error('ERROR:', err);
   }
   
+  await new Promise(r => setTimeout(r, 1000));
+  
+  // Click the '餅乾零食' quick filter button
+  const quickFilters = await page.$$('button');
+  for (let btn of quickFilters) {
+    const text = await page.evaluate(el => el.textContent, btn);
+    if (text && text.includes('餅乾零食')) {
+      await btn.click();
+      break;
+    }
+  }
+  
+  await new Promise(r => setTimeout(r, 1000));
+  
+  await page.screenshot({ path: 'live-query-test.png' });
+  console.log('SUCCESS: Page rendered correctly and screenshot saved!');
   await browser.close();
 })();

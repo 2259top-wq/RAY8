@@ -43,7 +43,7 @@ const categorizeBusiness = (name) => {
   if (name.includes('便當') || name.includes('快餐') || name.includes('燒臘') || name.includes('館') || name.includes('餐廳') || name.includes('餐飲')) tags.push('餐飲', '便當', '熟食', '小吃');
   if (name.includes('牛排') || name.includes('貴族世家')) tags.push('餐飲', '排餐', '牛排');
   if (name.includes('雜糧') || name.includes('商行') || name.includes('糧行') || name.includes('米店') || name.includes('油行') || name.includes('行')) tags.push('批發零售', '雜貨', '盤商');
-  if (name.includes('家樂福') || name.includes('大買家')) tags.push('量販店', '大賣場', '通路', '超市');
+  if (name.includes('家樂福') || name.includes('大買家') || name.includes('金色三麥')) tags.push('量販店', '大賣場', '通路', '超市');
   if (name.includes('飯店') || name.includes('酒店') || name.includes('晶華')) tags.push('飯店', '餐飲', '住宿');
   if (name.includes('海鮮') || name.includes('漁')) tags.push('海鮮', '水產');
   if (name.includes('肉品') || name.includes('肉脯') || name.includes('卜蜂')) tags.push('肉品', '加工肉品');
@@ -51,6 +51,16 @@ const categorizeBusiness = (name) => {
   // fallback if empty
   if (tags.length === 0) tags.push('食品加工', '其他');
   return tags;
+};
+
+const endProductsMapping = {
+  '卜蜂': ['雞肉玉米蛋炒飯', '肉絲蛋炒飯', '番茄紅醬義大利麵等56項'],
+  '路易莎': ['職人咖啡', '多款糕點'],
+  '金色三麥': ['巧達濃湯', '西班牙海鮮燉飯', '酸菜', '海鮮鍋'],
+  '老協珍': ['TOMMI湯米白醬鱈魚排米漢堡', '海鮮蝦排米漢堡'],
+  '廣達香': ['素食香鬆（海苔芝麻150g）'],
+  '貴族世家': ['即食食品'],
+  '布列德': ['麵包即食食品']
 };
 
 businesses.forEach(biz => {
@@ -69,11 +79,19 @@ businesses.forEach(biz => {
     if (!processedBrands[brand][name]) processedBrands[brand][name] = { name: name, count: 0, businesses: [] };
     
     processedBrands[brand][name].count++;
+    let endProducts = [];
+    Object.keys(endProductsMapping).forEach(key => {
+      if (biz.name.includes(key)) {
+        endProducts = [...endProducts, ...endProductsMapping[key]];
+      }
+    });
+
     processedBrands[brand][name].businesses.push({
       id: biz.id,
       name: biz.name,
       city: biz.city,
-      tags: categorizeBusiness(biz.name)
+      tags: categorizeBusiness(biz.name),
+      endProducts: endProducts.length > 0 ? endProducts : undefined
     });
     
     cityCounts[biz.city] = (cityCounts[biz.city] || 0) + 1;
