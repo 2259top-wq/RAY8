@@ -9,7 +9,7 @@ export default function QuickCheck() {
   // Re-use the same search index logic
   const searchIndex = useMemo(() => {
     const items: any[] = [];
-    Object.entries(analysisData.productsByBrand).forEach(([brandLabel, products]) => {
+    Object.entries(analysisData.productsByBrand).forEach(([, products]) => {
       products.forEach((p: any) => {
         p.businesses.forEach((b: any) => {
           items.push({
