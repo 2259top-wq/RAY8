@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Fuse from 'fuse.js';
 import lawIndex from '../law_index.json';
 import { Scale, Search, Send } from 'lucide-react';
@@ -18,6 +18,16 @@ export default function LawAssistant() {
       text: '您好，我是「食安法規 AI 助理」。您可以詢問我關於《食品安全衛生管理法》的相關罰則或規定。\n例如：「廠商使用違法油品該罰多少？」'
     }
   ]);
+
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -163,6 +173,7 @@ export default function LawAssistant() {
               </div>
             </div>
           ))}
+          <div ref={messagesEndRef} />
         </div>
 
         <div className="p-4 bg-white border-t border-gray-200">
