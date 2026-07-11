@@ -10,16 +10,21 @@ const productsByBrand = {
 
 // Map raw product strings to clean product names and identify their brand
 const cleanProductName = (rawProduct) => {
+  // Explicitly labeled
   if (rawProduct.includes('泰山')) return { brand: '泰山企業', name: '大豆沙拉油' };
   if (rawProduct.includes('福壽')) return { brand: '福壽實業', name: '大豆沙拉油' };
+  
+  // Known trademarks from the 2014 scandal
   if (rawProduct.includes('益康')) return { brand: '福懋油脂', name: '益康大豆沙拉油' };
   if (rawProduct.includes('金酥')) return { brand: '福懋油脂', name: '金酥耐炸油' };
   if (rawProduct.includes('環保鐵桶')) return { brand: '福懋油脂', name: '環保鐵桶沙拉油' };
   if (rawProduct.includes('健味香油')) return { brand: '福壽實業', name: '健味香油' };
-  if (rawProduct.includes('一級黃豆油')) return { brand: '泰山企業', name: '一級黃豆油' };
   
-  // Default fallback based on keywords if exact match isn't found
-  return { brand: '其他代工廠', name: rawProduct.replace(/[-*(\s\dLa-zA-Z]/g, '').trim() || '油品' };
+  // Generic products WITHOUT explicit brand labels must not be falsely attributed!
+  if (rawProduct.includes('一級黃豆油')) return { brand: '未標示/其他廠牌', name: '一級黃豆油' };
+  
+  // Default fallback
+  return { brand: '未標示/其他廠牌', name: rawProduct.replace(/[-*(\s\dLa-zA-Z]/g, '').trim() || '油品' };
 };
 
 const processedBrands = {};
