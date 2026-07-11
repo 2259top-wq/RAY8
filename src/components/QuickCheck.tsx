@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import Fuse from 'fuse.js';
 import { Search, CheckCircle2, AlertTriangle, ShieldCheck } from 'lucide-react';
-import analysisData from '../analysis_data.json';
+import analysisData from '../zhonglian_data.json';
 
 export default function QuickCheck() {
   const [query, setQuery] = useState('');
@@ -9,16 +9,14 @@ export default function QuickCheck() {
   // Re-use the same search index logic
   const searchIndex = useMemo(() => {
     const items: any[] = [];
-    Object.entries(analysisData.productsByBrand).forEach(([, products]) => {
-      products.forEach((p: any) => {
-        p.businesses.forEach((b: any) => {
-          items.push({
-            name: b.name,
-            tags: b.tags ? b.tags.join(' ') : '',
-            product: p.name,
-            endProductsRaw: b.endProducts || [],
-            endProducts: b.endProducts ? b.endProducts.join(' ') : ''
-          });
+    Object.entries(analysisData.productDetails).forEach(([productName, details]) => {
+      (details as any).businesses.forEach((b: any) => {
+        items.push({
+          name: b.name,
+          tags: b.tags ? b.tags.join(' ') : '',
+          product: productName,
+          endProductsRaw: b.endProducts || [],
+          endProducts: b.endProducts ? b.endProducts.join(' ') : ''
         });
       });
     });

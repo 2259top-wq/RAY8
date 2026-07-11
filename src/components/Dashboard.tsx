@@ -1,18 +1,32 @@
 import { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import analysisData from '../analysis_data.json';
+import analysisData from '../zhonglian_data.json';
 import { Map, Package, X, Building2 } from 'lucide-react';
 import TaiwanHeatmap from './TaiwanHeatmap';
 
-const cityData = Object.entries(analysisData.cityCounts).map(([name, count]) => ({ name, count }));
-const productData = Object.values(analysisData.productsByBrand)
-    .flat()
-    .map(product => ({
-      name: product.name,
-      count: product.count,
-      businesses: product.businesses
-    }))
-    .sort((a, b) => b.count - a.count);
+// Dynamically calculate cityCounts and productData from the real zhonglian_data.json
+const cityCountsRaw: Record<string, number> = {};
+const productDataRaw: any[] = [];
+
+Object.entries(analysisData.productDetails).forEach(([productName, details]) => {
+  productDataRaw.push({
+    name: productName,
+    count: (details as any).count,
+    businesses: (details as any).businesses
+  });
+  
+  (details as any).businesses.forEach((biz: any) => {
+    const city = biz.city;
+    if (!cityCountsRaw[city]) cityCountsRaw[city] = 0;
+    cityCountsRaw[city]++;
+  });
+});
+
+const cityData = Object.entries(cityCountsRaw)
+  .map(([name, count]) => ({ name, count }))
+  .sort((a, b) => b.count - a.count);
+
+const productData = productDataRaw.sort((a, b) => b.count - a.count);
 
 const COLORS = ['#ef4444', '#f59e0b', '#3b82f6', '#10b981', '#8b5cf6'];
 
@@ -59,7 +73,7 @@ export default function Dashboard() {
             </div>
             <div>
               <p className="text-sm font-medium text-slate-400">波及縣市總數</p>
-              <h3 className="text-3xl font-bold text-slate-100">{Object.keys(analysisData.cityCounts).length} 縣市</h3>
+              <h3 className="text-3xl font-bold text-slate-100">{Object.keys(cityCountsRaw).length} 縣市</h3>
             </div>
           </div>
         </div>
@@ -70,14 +84,14 @@ export default function Dashboard() {
             </div>
             <div>
               <p className="text-sm font-medium text-slate-400">問題油品種類</p>
-              <h3 className="text-3xl font-bold text-slate-100">{Object.values(analysisData.productsByBrand).flat().length} 項</h3>
+              <h3 className="text-3xl font-bold text-slate-100">{productData.length} 項</h3>
             </div>
           </div>
         </div>
       </div>
 
       {/* Taiwan Geographic Impact Heatmap */}
-      <TaiwanHeatmap cityCounts={analysisData.cityCounts} />
+      <TaiwanHeatmap cityCounts={cityCountsRaw} />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-slate-800/30 border border-slate-700 p-6 rounded-xl">
