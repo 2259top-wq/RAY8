@@ -5,6 +5,7 @@ import LawAssistant from './components/LawAssistant';
 import ZhonglianGraph from './components/ZhonglianGraph';
 import QuickCheck from './components/QuickCheck';
 import GreenList from './components/GreenList';
+import TaipeiHealth from './components/TaipeiHealth';
 import './App.css';
 
 function App() {
@@ -14,6 +15,16 @@ function App() {
     <div className="h-screen bg-[#f5f5f5] text-[#333] font-sans flex flex-col overflow-hidden">
       {/* Top Navigation - Akira Style */}
       <div className="w-full bg-white flex justify-center gap-1.5 p-2 shadow-[0_2px_4px_rgba(0,0,0,0.05)] flex-wrap relative z-50 flex-shrink-0">
+        <button
+          onClick={() => setActiveTab('taipeiHealth')}
+          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 border-2 border-red-500 animate-pulse ${
+            activeTab === 'taipeiHealth' 
+              ? 'bg-red-600 text-white shadow-md' 
+              : 'bg-red-50 hover:bg-red-100 text-red-700'
+          }`}
+        >
+          🏥 北市衛生局專區
+        </button>
         <button
           onClick={() => setActiveTab('graph')}
           className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
@@ -91,6 +102,7 @@ function App() {
         {activeTab === 'law' && <LawAssistant />}
         {activeTab === 'quickCheck' && <QuickCheck />}
         {activeTab === 'greenList' && <GreenList />}
+        {activeTab === 'taipeiHealth' && <TaipeiHealth />}
       </main>
 
       {/* Global Data Source & Legal Disclaimer Footer */}
