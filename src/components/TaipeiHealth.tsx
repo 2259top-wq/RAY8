@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ShieldAlert, MapPin, FileText, Search } from 'lucide-react';
 import taipeiData from '../taipei_health_data.json';
 
