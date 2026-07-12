@@ -46,7 +46,7 @@ export default function RegionalHealthDashboard({
   };
 
   return (
-    <div className="p-4 md:p-8 max-w-7xl mx-auto animate-in fade-in duration-500 pb-24 h-full flex flex-col">
+    <div className="p-4 md:p-8 max-w-7xl mx-auto animate-in fade-in duration-500 pb-24">
       {/* Header Section */}
       <div className="mb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
@@ -79,7 +79,7 @@ export default function RegionalHealthDashboard({
       </div>
 
       {/* Search Bar */}
-      <div className="mb-6 relative flex-shrink-0">
+      <div className="mb-6 relative">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
         <input 
           type="text" 
@@ -91,7 +91,7 @@ export default function RegionalHealthDashboard({
       </div>
 
       {/* Results Nested Accordion / Grid */}
-      <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar pb-10">
+      <div className="pb-10">
         {filteredData.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 text-gray-400">
             <ShieldAlert className="w-16 h-16 mb-4 opacity-50" />

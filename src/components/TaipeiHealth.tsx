@@ -12,7 +12,7 @@ export default function TaipeiHealth() {
   );
 
   return (
-    <div className="p-4 md:p-8 max-w-7xl mx-auto animate-in fade-in duration-500 pb-24 h-full flex flex-col">
+    <div className="p-4 md:p-8 max-w-7xl mx-auto animate-in fade-in duration-500 pb-24">
       {/* Header Section */}
       <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
@@ -30,19 +30,22 @@ export default function TaipeiHealth() {
         </div>
 
         {/* Source Warning Badge */}
-        <div className="bg-orange-50 border border-orange-200 p-4 rounded-xl shadow-sm md:w-auto w-full">
-          <div className="text-xs text-orange-500 font-bold mb-1 uppercase tracking-wider">⚠️ 污染源追溯公告</div>
-          <div className="text-orange-800 font-bold flex items-center">
-            來源：<span className="text-red-600 ml-1 text-lg">南僑油脂公司</span>
+        <div className="bg-red-50 border border-red-200 p-4 rounded-xl shadow-sm md:w-auto w-full">
+          <div className="text-xs text-red-600 font-bold mb-1 uppercase tracking-wider flex items-center">
+            <ShieldAlert className="w-4 h-4 mr-1" />
+            最高警報 - 污染源追溯
           </div>
-          <div className="text-orange-600 text-sm font-medium mt-1">
-            受影響品項：大豆油產製品
+          <div className="font-bold text-red-800 text-sm mb-1">
+            來源：<span className="text-gray-900">南僑油脂公司 (大豆油產製品)</span>
+          </div>
+          <div className="text-gray-500 text-xs font-medium mt-2 leading-relaxed max-w-sm">
+            本專區名單100%源自台北市政府衛生局稽查公告，請民眾注意避雷。
           </div>
         </div>
       </div>
 
       {/* Search Bar */}
-      <div className="mb-6 relative flex-shrink-0">
+      <div className="mb-8 relative">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
         <input 
           type="text" 
@@ -53,8 +56,8 @@ export default function TaipeiHealth() {
         />
       </div>
 
-      {/* Results Grid */}
-      <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar pb-10">
+      {/* Results Grid - Naturally Scrolling */}
+      <div className="pb-10">
         {filteredData.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 text-gray-400">
             <ShieldAlert className="w-16 h-16 mb-4 opacity-50" />
