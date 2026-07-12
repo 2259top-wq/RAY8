@@ -17,9 +17,7 @@ lines.forEach(line => {
   
   if (mergedMap.has(name)) {
     const existing = mergedMap.get(name);
-    if (!existing.orderNumbers.includes(orderNum)) {
-      existing.orderNumbers.push(orderNum);
-    }
+    existing.orderNumbers.push(orderNum);
   } else {
     mergedMap.set(name, {
       name,
