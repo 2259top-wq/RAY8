@@ -4,11 +4,16 @@ import analysisData from '../zhonglian_data.json';
 import { Map, Package, X, Building2 } from 'lucide-react';
 import TaiwanHeatmap from './TaiwanHeatmap';
 
+import taipeiData from '../taipei_health_data.json';
+import kaohsiungData from '../kaohsiung_health_data.json';
+import taichungData from '../taichung_health_data.json';
+
 // Dynamically calculate cityCounts and productData from the real zhonglian_data.json
 const cityCountsRaw: Record<string, number> = {};
 const productDataRaw: any[] = [];
 let totalBusinesses = 0;
 
+// 1. Process Zhonglian
 Object.entries(analysisData.productDetails).forEach(([productName, details]) => {
   productDataRaw.push({
     name: productName,
@@ -24,6 +29,66 @@ Object.entries(analysisData.productDetails).forEach(([productName, details]) => 
     cityCountsRaw[city]++;
   });
 });
+
+// Helper for city extraction
+const extractCity = (address: string) => {
+  const match = address.match(/^(..[市縣])/);
+  return match ? match[1].replace('台', '臺') : '臺北市';
+};
+
+// 2. Process Taipei Health
+taipeiData.forEach((item: any) => {
+  totalBusinesses++;
+  const city = extractCity(item.address);
+  if (!cityCountsRaw[city]) cityCountsRaw[city] = 0;
+  cityCountsRaw[city]++;
+
+  let prodEntry = productDataRaw.find(p => p.name === '南僑油脂公司 (大豆油產製品)');
+  if (!prodEntry) {
+    prodEntry = { name: '南僑油脂公司 (大豆油產製品)', count: 0, businesses: [] };
+    productDataRaw.push(prodEntry);
+  }
+  prodEntry.count++;
+  prodEntry.businesses.push({
+    id: item.id,
+    name: item.clientName,
+    city: city,
+    tags: ['北市衛生局']
+  });
+});
+
+// 3. Process Kaohsiung & Taichung
+const processRegionalData = (regionalData: any[], sourceTag: string) => {
+  regionalData.forEach(group => {
+    group.branches.forEach((branch: any) => {
+      // Handle the PX Mart 161 branches special case
+      const branchCount = branch.name.includes('161家分店') ? 161 : 1;
+      totalBusinesses += branchCount;
+      
+      const city = extractCity(branch.address);
+      if (!cityCountsRaw[city]) cityCountsRaw[city] = 0;
+      cityCountsRaw[city] += branchCount;
+
+      branch.products.forEach((product: any) => {
+        let prodEntry = productDataRaw.find(p => p.name === product.name);
+        if (!prodEntry) {
+          prodEntry = { name: product.name, count: 0, businesses: [] };
+          productDataRaw.push(prodEntry);
+        }
+        prodEntry.count += branchCount;
+        prodEntry.businesses.push({
+          id: Math.random().toString(),
+          name: `${group.company} - ${branch.name}`,
+          city: city,
+          tags: [sourceTag]
+        });
+      });
+    });
+  });
+};
+
+processRegionalData(kaohsiungData, '高市查緝');
+processRegionalData(taichungData, '中市查緝');
 
 const cityData = Object.entries(cityCountsRaw)
   .map(([name, count]) => ({ name, count }))
