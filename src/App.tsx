@@ -6,6 +6,8 @@ import ZhonglianGraph from './components/ZhonglianGraph';
 import QuickCheck from './components/QuickCheck';
 import GreenList from './components/GreenList';
 import TaipeiHealth from './components/TaipeiHealth';
+import KaohsiungHealth from './components/KaohsiungHealth';
+import TaichungHealth from './components/TaichungHealth';
 import './App.css';
 
 function App() {
@@ -17,13 +19,33 @@ function App() {
       <div className="w-full bg-white flex justify-center gap-1.5 p-2 shadow-[0_2px_4px_rgba(0,0,0,0.05)] flex-wrap relative z-50 flex-shrink-0">
         <button
           onClick={() => setActiveTab('taipeiHealth')}
-          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 border-2 border-red-500 animate-pulse ${
+          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 border border-red-200 animate-pulse ${
             activeTab === 'taipeiHealth' 
               ? 'bg-red-600 text-white shadow-md' 
               : 'bg-red-50 hover:bg-red-100 text-red-700'
           }`}
         >
-          🏥 北市衛生局專區
+          🏥 北市查緝
+        </button>
+        <button
+          onClick={() => setActiveTab('kaohsiungHealth')}
+          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 border border-orange-200 ${
+            activeTab === 'kaohsiungHealth' 
+              ? 'bg-orange-500 text-white shadow-md' 
+              : 'bg-orange-50 hover:bg-orange-100 text-orange-700'
+          }`}
+        >
+          🏥 高市查緝
+        </button>
+        <button
+          onClick={() => setActiveTab('taichungHealth')}
+          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 border border-blue-200 ${
+            activeTab === 'taichungHealth' 
+              ? 'bg-blue-600 text-white shadow-md' 
+              : 'bg-blue-50 hover:bg-blue-100 text-blue-700'
+          }`}
+        >
+          🏥 中市查緝
         </button>
         <button
           onClick={() => setActiveTab('graph')}
@@ -103,6 +125,8 @@ function App() {
         {activeTab === 'quickCheck' && <QuickCheck />}
         {activeTab === 'greenList' && <GreenList />}
         {activeTab === 'taipeiHealth' && <TaipeiHealth />}
+        {activeTab === 'kaohsiungHealth' && <KaohsiungHealth />}
+        {activeTab === 'taichungHealth' && <TaichungHealth />}
       </main>
 
       {/* Global Data Source & Legal Disclaimer Footer */}

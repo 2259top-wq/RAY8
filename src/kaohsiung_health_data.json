@@ -1,0 +1,145 @@
+[
+  {
+    "company": "西堤",
+    "branches": [
+      { "name": "高雄中山", "address": "高雄市新興區中山二路472號2樓", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] },
+      { "name": "高雄富國", "address": "高雄市左營區富國路302號", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] },
+      { "name": "鳳山萬家福", "address": "高雄市鳳山區中山西路236號2樓", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] },
+      { "name": "高雄後昌新", "address": "高雄市楠梓區後昌新路152號", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] }
+    ]
+  },
+  {
+    "company": "陶板屋",
+    "branches": [
+      { "name": "高雄三民澄清", "address": "高雄市三民區澄清路708號", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] },
+      { "name": "高雄裕誠", "address": "高雄市左營區裕誠路475號2樓", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] }
+    ]
+  },
+  {
+    "company": "和牛涮",
+    "branches": [
+      { "name": "高雄博愛", "address": "高雄市左營區博愛二路682號", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] },
+      { "name": "高雄夢時代", "address": "高雄市前鎮區中華五路789號4樓", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] }
+    ]
+  },
+  {
+    "company": "就饗",
+    "branches": [
+      { "name": "高雄夢時代", "address": "高雄市前鎮區中華五路789號7樓", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] },
+      { "name": "高雄富民", "address": "高雄市左營區富民路353號1樓", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] }
+    ]
+  },
+  {
+    "company": "聚 日式鍋物",
+    "branches": [
+      { "name": "高雄夢時代", "address": "高雄市前鎮區中華五路789號4樓", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] },
+      { "name": "高雄富民", "address": "高雄市左營區富民路355號2樓", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] }
+    ]
+  },
+  {
+    "company": "品田牧場",
+    "branches": [
+      { "name": "高雄澄清", "address": "高雄市三民區澄清路442號", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] }
+    ]
+  },
+  {
+    "company": "莆田",
+    "branches": [
+      { "name": "高雄自由", "address": "高雄市左營區自由三路98號", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] }
+    ]
+  },
+  {
+    "company": "享鴨",
+    "branches": [
+      { "name": "高雄裕誠", "address": "高雄市左營區裕誠路448號2樓", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] }
+    ]
+  },
+  {
+    "company": "藝奇日式料理",
+    "branches": [
+      { "name": "高雄夢時代", "address": "高雄市前鎮區中華五路789號4樓", "products": [{ "name": "益康大豆沙拉油18L", "batch": "20270411000408", "expiry": "2027.04.11" }] }
+    ]
+  },
+  {
+    "company": "旭集 和食集錦",
+    "branches": [
+      { "name": "義享店", "address": "高雄市鼓山區大順一路115號7樓", "products": [{ "name": "福壽健味香油3L/桶", "batch": "BL240426L", "expiry": "2028.04.19" }] }
+    ]
+  },
+  {
+    "company": "真珠-台灣佳味",
+    "branches": [
+      { "name": "義享店", "address": "高雄市鼓山區大順一路115號7樓", "products": [
+        { "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.05" },
+        { "name": "福壽健味香油3L/桶", "batch": "BL240426L", "expiry": "2028.04.19" }
+      ] }
+    ]
+  },
+  {
+    "company": "開飯川食堂",
+    "branches": [
+      { "name": "左營店", "address": "高雄市左營區高鐵路115號4樓", "products": [{ "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.19" }] },
+      { "name": "夢時代", "address": "高雄市前鎮區中華五路789號3樓", "products": [{ "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.05" }] }
+    ]
+  },
+  {
+    "company": "饗食天堂",
+    "branches": [
+      { "name": "高雄店", "address": "高雄市苓雅區三多四路21號11樓", "products": [
+        { "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.05" },
+        { "name": "福壽健味香油3L/桶", "batch": "BL240426L", "expiry": "2028.04.19" }
+      ] },
+      { "name": "夢時代店", "address": "高雄市前鎮區中華五路789號9樓", "products": [
+        { "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.05" },
+        { "name": "福壽健味香油3L/桶", "batch": "BL240426L", "expiry": "2028.04.19" }
+      ] }
+    ]
+  },
+  {
+    "company": "全聯",
+    "branches": [
+      { "name": "高雄市161家分店", "address": "高雄市161家分店", "products": [
+        { "name": "泰山精選蔬菜油-3L*6", "batch": "2027072506", "expiry": "2027.07.25" },
+        { "name": "泰山好理調合油-2L*6", "batch": "2027100901", "expiry": "2027.10.09" },
+        { "name": "泰山花生風味調和油2L*6入", "batch": "2027100901", "expiry": "2027.10.09" },
+        { "name": "泰山好理調合油0.6L*24", "batch": "2027072504", "expiry": "2027.07.25" }
+      ] }
+    ]
+  },
+  {
+    "company": "常粵",
+    "branches": [
+      { "name": "總店", "address": "高雄市左營區富民路351號", "products": [{ "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.05" }] }
+    ]
+  },
+  {
+    "company": "溜溜酸菜魚專賣店",
+    "branches": [
+      { "name": "高雄SOGO店", "address": "高雄市前鎮區三多三路217號B1F", "products": [{ "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.05" }] }
+    ]
+  },
+  {
+    "company": "上菜 片皮鴨專賣店",
+    "branches": [
+      { "name": "高雄夢時代店", "address": "高雄市前鎮區中華五路789號6樓", "products": [{ "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.05" }] }
+    ]
+  },
+  {
+    "company": "漢來大飯店",
+    "branches": [
+      { "name": "巨蛋會館-9樓宴會廳", "address": "高雄市左營區博愛二路767號9樓", "products": [{ "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.05" }] }
+    ]
+  },
+  {
+    "company": "漢來海港",
+    "branches": [
+      { "name": "高雄漢神巨蛋店", "address": "高雄市左營區博愛二路777號5樓", "products": [{ "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.05" }] }
+    ]
+  },
+  {
+    "company": "漢來蔬食",
+    "branches": [
+      { "name": "高雄漢神巨蛋店", "address": "高雄市左營區博愛二路777號5樓", "products": [{ "name": "福壽健味香油3L/桶", "batch": "BL150426L", "expiry": "2028.04.05" }] }
+    ]
+  }
+]
