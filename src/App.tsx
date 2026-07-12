@@ -15,11 +15,11 @@ function App() {
 
   return (
     <div className="h-screen bg-[#f5f5f5] text-[#333] font-sans flex flex-col overflow-hidden">
-      {/* Top Navigation - Akira Style */}
-      <div className="w-full bg-white flex justify-center gap-1.5 p-2 shadow-[0_2px_4px_rgba(0,0,0,0.05)] flex-wrap relative z-50 flex-shrink-0">
+      {/* Top Navigation - Scrollable on mobile instead of wrapping */}
+      <div className="w-full bg-white flex justify-start md:justify-center gap-2 p-3 shadow-[0_2px_4px_rgba(0,0,0,0.05)] overflow-x-auto whitespace-nowrap flex-nowrap relative z-50 flex-shrink-0 custom-scrollbar scroll-smooth">
         <button
           onClick={() => setActiveTab('taipeiHealth')}
-          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 border border-red-200 animate-pulse ${
+          className={`flex-shrink-0 px-4 py-2 rounded-md font-bold text-sm transition-all duration-200 border border-red-200 animate-pulse ${
             activeTab === 'taipeiHealth' 
               ? 'bg-red-600 text-white shadow-md' 
               : 'bg-red-50 hover:bg-red-100 text-red-700'
@@ -29,7 +29,7 @@ function App() {
         </button>
         <button
           onClick={() => setActiveTab('kaohsiungHealth')}
-          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 border border-orange-200 ${
+          className={`flex-shrink-0 px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 border border-orange-200 ${
             activeTab === 'kaohsiungHealth' 
               ? 'bg-orange-500 text-white shadow-md' 
               : 'bg-orange-50 hover:bg-orange-100 text-orange-700'
@@ -39,7 +39,7 @@ function App() {
         </button>
         <button
           onClick={() => setActiveTab('taichungHealth')}
-          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 border border-blue-200 ${
+          className={`flex-shrink-0 px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 border border-blue-200 ${
             activeTab === 'taichungHealth' 
               ? 'bg-blue-600 text-white shadow-md' 
               : 'bg-blue-50 hover:bg-blue-100 text-blue-700'
@@ -49,7 +49,7 @@ function App() {
         </button>
         <button
           onClick={() => setActiveTab('graph')}
-          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
+          className={`flex-shrink-0 px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
             activeTab === 'graph' 
               ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white shadow-md' 
               : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -59,7 +59,7 @@ function App() {
         </button>
         <button
           onClick={() => setActiveTab('zhonglian')}
-          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
+          className={`flex-shrink-0 px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
             activeTab === 'zhonglian' 
               ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white shadow-md' 
               : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -69,7 +69,7 @@ function App() {
         </button>
         <button
           onClick={() => setActiveTab('dashboard')}
-          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
+          className={`flex-shrink-0 px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
             activeTab === 'dashboard' 
               ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white shadow-md' 
               : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -79,7 +79,7 @@ function App() {
         </button>
         <button
           onClick={() => setActiveTab('law')}
-          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
+          className={`flex-shrink-0 px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
             activeTab === 'law' 
               ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white shadow-md' 
               : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -89,7 +89,7 @@ function App() {
         </button>
         <button
           onClick={() => setActiveTab('greenList')}
-          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
+          className={`flex-shrink-0 px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
             activeTab === 'greenList' 
               ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-md' 
               : 'bg-green-50 hover:bg-green-100 text-green-700 border border-green-200'
@@ -99,7 +99,7 @@ function App() {
         </button>
         <button
           onClick={() => setActiveTab('quickCheck')}
-          className={`px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
+          className={`flex-shrink-0 px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 ${
             activeTab === 'quickCheck' 
               ? 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-md' 
               : 'bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200'
@@ -111,7 +111,7 @@ function App() {
         {/* Dedicated Search Routing Button */}
         <button
           onClick={() => setActiveTab('graph')}
-          className="px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 bg-blue-50 text-blue-600 hover:bg-blue-100 shadow-sm border border-blue-200 flex items-center gap-1.5 animate-pulse"
+          className="flex-shrink-0 px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold text-xs md:text-sm transition-all duration-200 bg-blue-50 text-blue-600 hover:bg-blue-100 shadow-sm border border-blue-200 flex items-center gap-1.5 animate-pulse"
         >
           🔍 進入 X光透視搜尋
         </button>
